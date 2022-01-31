@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<order>
+    <event_id>48a1e2b7-74e9-4790-b324-1e6fa22e1ca7</event_id>
+    <order_id>61e2d090-0d53-451f-9031-413559d34732</order_id>
+    <order_number>10105000000000</order_number>
+    <state>returned</state>
+    <store_id>11</store_id>
+    <timestamp>2020-01-28T07:41:31.947Z</timestamp>
+    <delivery_details>
+        <delivery_carrier_name>DHL</delivery_carrier_name>
+        <delivery_tracking_number>003404342888680268172</delivery_tracking_number>
+        <return_carrier_name>DHL</return_carrier_name>
+        <return_tracking_number>35141263178</return_tracking_number>
+    </delivery_details>
+    <customer_billing_address>
+        <address_line_1>Musterstraße 12 34</address_line_1>
+        <city>Berlin</city>
+        <country_code>DE</country_code>
+        <first_name>Max</first_name>
+        <last_name>Mustermann</last_name>
+        <zip_code>1234DDD5</zip_code>
+    </customer_billing_address>
+    <items>
+        <item>15c3aa83-3f73-4ad6-a326-e1a10a89d111</item>
+        <ean>4059701022111</ean>
+        <item_price>11.11</item_price>
+        <currency>EUR</currency>
+        <article_number>31.832.34-6,5</article_number>
+        <article_location>213</article_location>
+        <return_reason_code>1</return_reason_code>
+        <return_location>STORE</return_location>
+    </items>
+    <items>
+        <item>15c3aa83-3f73-4ad6-a326-e1a10a89d222</item>
+        <ean>4059701022222</ean>
+        <item_price>22.22</item_price>
+        <currency>EUR</currency>
+        <article_number>31.832.34-6,5</article_number>
+        <article_location>213</article_location>
+        <return_reason_code>2</return_reason_code>
+        <return_location>STORE</return_location>
+    </items>
+</order>

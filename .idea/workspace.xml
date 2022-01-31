@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24BgVcv6AhTHVDVW1mFTo5xN4yD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.38045976" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Faina04\IdeaProj_Ultimate\CRT\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AppStartAsAdmin">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.faina.App" />
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppCRTPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.faina.AppCRTPage" />
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStartAsAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.faina.runner.AppStartAsAdmin" />
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecialCherecters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.faina.SpecialCherecters" />
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CRTAccessWebDriverTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.faina.CRTAccessWebDriverTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.AppCRTPage" />
+      <item itemvalue="Application.SpecialCherecters" />
+      <item itemvalue="Application.AppStartAsAdmin" />
+      <item itemvalue="TestNG.CRTAccessWebDriverTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppStartAsAdmin" />
+        <item itemvalue="Application.AppCRTPage" />
+        <item itemvalue="Application.SpecialCherecters" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="TestNG.CRTAccessWebDriverTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="" />
+      <created>1643109419868</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643109419868</updated>
+      <workItem from="1643109421649" duration="2136000" />
+      <workItem from="1643111860572" duration="13307000" />
+      <workItem from="1643137883391" duration="4209000" />
+      <workItem from="1643143232338" duration="10526000" />
+      <workItem from="1643154676808" duration="39000" />
+      <workItem from="1643178506680" duration="18096000" />
+      <workItem from="1643225690667" duration="11245000" />
+      <workItem from="1643264775389" duration="8681000" />
+      <workItem from="1643351460450" duration="4017000" />
+      <workItem from="1643409448332" duration="2255000" />
+      <workItem from="1643411881576" duration="200000" />
+      <workItem from="1643412241677" duration="6474000" />
+      <workItem from="1643554046086" duration="23000" />
+      <workItem from="1643554480598" duration="85000" />
+      <workItem from="1643560859692" duration="68000" />
+      <workItem from="1643660119991" duration="844000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsAdmin.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
