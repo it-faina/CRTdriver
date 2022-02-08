@@ -2,8 +2,12 @@ package org.faina.runner;
 
 import org.faina.configuration.Configurator;
 import org.faina.configuration.Credentials;
+import org.faina.tools.ReturnEanDataPicker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.xml.bind.JAXBException;
+import java.io.IOException;
 
 import static org.faina.configuration.Mode.HAMBURG;
 import static org.faina.configuration.Mode.ROSTOCK;
@@ -12,7 +16,7 @@ import static org.faina.configuration.Mode.ROSTOCK;
 public class AppStartAsUser {
     final static Logger log = LoggerFactory.getLogger(AppStartAsUser.class);
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, JAXBException, IOException {
         log.info(".");
         log.info("CRT Service started");
         Enum currentCRTchannel;
@@ -32,8 +36,9 @@ public class AppStartAsUser {
 //            secondPage.clickSearchButton(orderID);
 //            orderPage.getOrderIDtoPicking();
             } else {
+                ReturnEanDataPicker.dataPicker();
                 log.info("Realise order Mode on {}", currentCRTchannel.name());
-//            AllOrdersPage allOrdersPage = secondPage.clickAllOrders();
+            AllOrdersPage allOrdersPage = orderPage.clickAllOrders();
 //            log.info(searchedOrderID);
 //            allOrdersPage.clickSearchButton(searchedOrderID);
 //            allOrdersPage.clickViewHistoryButton();

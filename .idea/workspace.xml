@@ -4,34 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="Initial commit - on advanced version">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Credentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Mode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/PropertyNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="Selectors_refactoring - add loop for login to Rostock and Hamburg">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/AppSandbox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsAdmin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/SecondPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/AppSandboxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/AppStartAsAdmin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/SecondPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/StartPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/faina/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +174,9 @@
       <workItem from="1644185808512" duration="612000" />
       <workItem from="1644186627544" duration="19000" />
       <workItem from="1644187320246" duration="12100000" />
+      <workItem from="1644316181603" duration="1314000" />
+      <workItem from="1644337783523" duration="945000" />
+      <workItem from="1644347378008" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -213,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643661571212</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Selectors_refactoring - add loop for login to Rostock and Hamburg">
+      <created>1644316396244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644316396244</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +218,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit - on advanced version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit - on advanced version" />
+    <MESSAGE value="Selectors_refactoring - add loop for login to Rostock and Hamburg" />
+    <option name="LAST_COMMIT_MESSAGE" value="Selectors_refactoring - add loop for login to Rostock and Hamburg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
