@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class AllOrdersPage extends SecondPage {
+public class AllOrdersPage extends OrderPage {
 
     public AllOrdersPage(WebDriver driver) {
         super(driver);

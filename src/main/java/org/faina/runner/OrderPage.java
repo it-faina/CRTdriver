@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class SecondPage extends StartPage {
+public class OrderPage extends LoginPage {
     WebDriver driver;
 
-    public SecondPage(WebDriver driver) {
+    public OrderPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -18,7 +18,8 @@ public class SecondPage extends StartPage {
 
     }
 
-    void clickOkCookies() {
+    void clickOkCookies() throws InterruptedException {
+        Thread.sleep(5000);
         WebElement cookies = driver.findElement(By.xpath("//*[@id='uc-btn-accept-banner']"));
         cookies.click();
     }

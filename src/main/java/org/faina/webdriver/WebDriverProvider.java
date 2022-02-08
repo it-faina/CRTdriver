@@ -1,5 +1,6 @@
 package org.faina.webdriver;
 
+import org.faina.configuration.Configurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,15 +16,14 @@ public class WebDriverProvider {
     private WebDriverProvider() {
     }
 
-    public static void start(long implicityTime) {
+    public static void start() {
 
-        System.setProperty("webdriver.chrome.driver", "D:/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", Configurator.getWebdriverDir() + CHROMEDRIVER);
         driver = new ChromeDriver();
         driver.navigate().refresh();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(implicityTime, TimeUnit.SECONDS);
-
+        driver.manage().timeouts().implicitlyWait(Configurator.getImplicytyWait(), TimeUnit.SECONDS);
     }
 
     /**
@@ -34,7 +34,6 @@ public class WebDriverProvider {
     public static WebDriver getDriver() {
         return driver;
     }
-
 
 
     /**

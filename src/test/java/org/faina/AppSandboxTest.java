@@ -8,7 +8,7 @@ import static org.testng.AssertJUnit.assertTrue;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AppSandboxTest
 {
     /**
      * Rigorous Test :-)

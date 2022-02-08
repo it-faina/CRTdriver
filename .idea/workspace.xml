@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="" />
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="Initial commit - on advanced version">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Credentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Mode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/PropertyNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/AppSandbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsAdmin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/SecondPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/AppSandboxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/AppStartAsAdmin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/SecondPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/StartPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/faina/AppTest.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,10 +47,16 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="24BgVcv6AhTHVDVW1mFTo5xN4yD" />
@@ -35,8 +69,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38045976" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
@@ -46,20 +80,7 @@
       <recent name="C:\Users\Faina04\IdeaProj_Ultimate\CRT\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStartAsAdmin">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.faina.App" />
-      <module name="CRTdriver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.faina.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.AppStartAsUser">
     <configuration name="AppCRTPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.faina.AppCRTPage" />
       <module name="CRTdriver" />
@@ -73,8 +94,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppStartAsAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.faina.runner.AppStartAsAdmin" />
+    <configuration name="AppSandbox" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.faina.AppSandbox" />
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStartAsUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.faina.runner.AppStartAsUser" />
       <module name="CRTdriver" />
       <extension name="coverage">
         <pattern>
@@ -117,18 +151,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
       <item itemvalue="Application.AppCRTPage" />
       <item itemvalue="Application.SpecialCherecters" />
-      <item itemvalue="Application.AppStartAsAdmin" />
+      <item itemvalue="Application.AppSandbox" />
+      <item itemvalue="Application.AppStartAsUser" />
       <item itemvalue="TestNG.CRTAccessWebDriverTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppStartAsAdmin" />
+        <item itemvalue="Application.AppStartAsUser" />
+        <item itemvalue="Application.AppSandbox" />
         <item itemvalue="Application.AppCRTPage" />
         <item itemvalue="Application.SpecialCherecters" />
-        <item itemvalue="Application.App" />
         <item itemvalue="TestNG.CRTAccessWebDriverTest" />
       </list>
     </recent_temporary>
@@ -156,8 +190,30 @@
       <workItem from="1643554046086" duration="23000" />
       <workItem from="1643554480598" duration="85000" />
       <workItem from="1643560859692" duration="68000" />
-      <workItem from="1643660119991" duration="844000" />
+      <workItem from="1643660119991" duration="2095000" />
+      <workItem from="1643665567406" duration="339000" />
+      <workItem from="1643667557328" duration="10341000" />
+      <workItem from="1643732903350" duration="79000" />
+      <workItem from="1643733001303" duration="7000" />
+      <workItem from="1644185808512" duration="612000" />
+      <workItem from="1644186627544" duration="19000" />
+      <workItem from="1644187320246" duration="12100000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit - on advanced version">
+      <created>1643661522876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643661522876</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit - on advanced version">
+      <created>1643661571212</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643661571212</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,23 +230,17 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit - on advanced version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit - on advanced version" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsAdmin.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
