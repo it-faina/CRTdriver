@@ -26,9 +26,7 @@ public class WebDriverTest {
 
         driver.findElement(By.id("search_form_input_homepage")).sendKeys("JavaStart");
         driver.findElement(By.id("search_form_input_homepage")).submit();
-
         String pageTitle = driver.getTitle();
-
         assertTrue(pageTitle.contains("JavaStart"));
     }
 

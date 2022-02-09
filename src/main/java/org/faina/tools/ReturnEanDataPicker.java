@@ -23,13 +23,12 @@ public class ReturnEanDataPicker {
         String searchedOrderID = myOrdered.getOrder_number();
         System.out.println(searchedOrderID);
         ArrayList<Item> myItem = myOrdered.getItems();
-        String ean = "";
+        String ean;
         for (Item i : myItem
         ) {
             ean = i.getEan();
             System.out.println(ean);
         }
-
         log.info("wgrany plik");
     }
 }

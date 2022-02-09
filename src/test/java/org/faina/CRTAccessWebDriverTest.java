@@ -39,6 +39,4 @@ public class CRTAccessWebDriverTest {
         driver.close();
         driver.quit();
     }
-
-
 }

@@ -4,12 +4,12 @@ import static org.faina.configuration.Mode.HAMBURG;
 import static org.faina.configuration.Mode.ROSTOCK;
 
 public class Credentials {
-    private String login;
-    private String password;
-    private String connectedRetailInfo;
+    private final String login;
+    private final String password;
+    private final String connectedRetailInfo;
 
-    public Credentials(Enum crtChanell) {
-        if (crtChanell == HAMBURG) {
+    public Credentials(Enum crtChannel) {
+        if (crtChannel == HAMBURG) {
             login = Configurator.getHamburgUser();
             password = Configurator.getHamburgPass();
             this.connectedRetailInfo = HAMBURG.getText();

@@ -18,6 +18,10 @@ public class Configurator extends ConfigProperties {
         return getProperty("landingPage", "http://www.faina-lifestyle.pl/");
     }
 
+    public static String getServicedChanel() {
+        return getProperty("servicedChanel", "ROSTOCK");
+    }
+
     public static String getHamburgUser() {
         return getProperty("userHamburg", "demoUserHamburg");
     }

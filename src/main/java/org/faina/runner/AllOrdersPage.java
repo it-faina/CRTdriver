@@ -31,19 +31,13 @@ public class AllOrdersPage extends OrderPage {
 
     public void returnReason(String returnReason) throws InterruptedException {
         Thread.sleep(2000);
-//        WebElement doesntSuite = driver.findElement(By.xpath("//a[contains(@class,'v-list__tile v-list__tile--link theme--light')]"));
-//        //div[@class='v-card v-sheet theme--light']//div[contains(text(),'5. Arrived too late')]
         WebElement doesntSuite = driver.findElement(By.xpath("//div[@class='v-card v-sheet theme--light']//div[contains(text(),'" + returnReason + "')]"));
         doesntSuite.click();
 
     }
 
     String readEANfromSectionOrder(String ean) throws InterruptedException {
-
         System.out.println(ean);
-//        WebElement eanField = driver.findElement(By.xpath("//section/div/div/section/div[@class='order-line__article-ean']"));
-//        ean = eanField.getText();
-//        System.out.println(ean);
         Thread.sleep(2000);
         List<WebElement> eanList = driver.findElements(By.xpath("//section/div/div/section/div[@class='order-line__article-ean']"));
         int eanElementOnOrderList = 1;
@@ -56,7 +50,6 @@ public class AllOrdersPage extends OrderPage {
                 hereClickToMarkReturned.click();
                 WebElement doesntSuite = driver.findElement(By.xpath("//section["+eanElementOnOrderList+"]/div/div/section/div[@class='order-line__article-ean']/preceding::div[@class='v-list__tile__title' and contains(text(),'2. Too big')]["+eanElementOnOrderList+"]"));
                 doesntSuite.click();
-//                returnReason("5. Arrived too late");
             }
             eanElementOnOrderList++;
         }

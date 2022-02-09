@@ -62,5 +62,4 @@ public class ConfigProperties {
         }
         return (propertyValue == null) ? defaultValue : Boolean.parseBoolean(propertyValue);
     }
-
 }

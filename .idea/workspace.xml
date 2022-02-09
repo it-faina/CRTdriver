@@ -4,10 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="Selectors_refactoring - add loop for login to Rostock and Hamburg">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="one_login_mode - auto ordering for three orders done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/AppSandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/AppSandbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/ExamplePageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/backingpack/ReadXMLToObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/backingpack/ReadXMLToObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Mode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Mode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/AppSandboxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/AppSandboxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/CRTAccessWebDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/CRTAccessWebDriverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/WebDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/WebDriverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="selectors_refactoring" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +72,7 @@
       <recent name="C:\Users\Faina04\IdeaProj_Ultimate\CRT\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppStartAsUser">
+  <component name="RunManager" selected="TestNG.AppSandboxTest">
     <configuration name="AppCRTPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.faina.AppCRTPage" />
       <module name="CRTdriver" />
@@ -109,16 +125,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CRTAccessWebDriverTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AppSandboxTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CRTdriver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="PATTERN" value="org.faina.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.faina.CRTAccessWebDriverTest" />
+      <option name="PACKAGE_NAME" value="org.faina" />
+      <option name="MAIN_CLASS_NAME" value="org.faina.AppSandboxTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -131,15 +147,15 @@
       <item itemvalue="Application.SpecialCherecters" />
       <item itemvalue="Application.AppSandbox" />
       <item itemvalue="Application.AppStartAsUser" />
-      <item itemvalue="TestNG.CRTAccessWebDriverTest" />
+      <item itemvalue="TestNG.AppSandboxTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppStartAsUser" />
+        <item itemvalue="TestNG.AppSandboxTest" />
         <item itemvalue="Application.AppSandbox" />
+        <item itemvalue="Application.AppStartAsUser" />
         <item itemvalue="Application.AppCRTPage" />
         <item itemvalue="Application.SpecialCherecters" />
-        <item itemvalue="TestNG.CRTAccessWebDriverTest" />
       </list>
     </recent_temporary>
   </component>
@@ -177,6 +193,7 @@
       <workItem from="1644316181603" duration="1314000" />
       <workItem from="1644337783523" duration="945000" />
       <workItem from="1644347378008" duration="3000" />
+      <workItem from="1644347483945" duration="16113000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -199,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644316396244</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Selectors_refactoring - backup before simplification to one login">
+      <created>1644347578639</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644347578639</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,17 +243,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit - on advanced version" />
     <MESSAGE value="Selectors_refactoring - add loop for login to Rostock and Hamburg" />
-    <option name="LAST_COMMIT_MESSAGE" value="Selectors_refactoring - add loop for login to Rostock and Hamburg" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Selectors_refactoring - backup before simplification to one login" />
+    <MESSAGE value="one_login_mode - auto ordering for three orders done" />
+    <option name="LAST_COMMIT_MESSAGE" value="one_login_mode - auto ordering for three orders done" />
   </component>
 </project>

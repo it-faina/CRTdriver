@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class OrderPage extends LoginPage {
     WebDriver driver;
 
@@ -19,9 +21,10 @@ public class OrderPage extends LoginPage {
     }
 
     void clickOkCookies() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(4000);
         WebElement cookies = driver.findElement(By.xpath("//*[@id='uc-btn-accept-banner']"));
         cookies.click();
+        Thread.sleep(4000);
     }
 
 
@@ -42,21 +45,25 @@ public class OrderPage extends LoginPage {
     String getOrderIDtoPicking() throws InterruptedException {
         Thread.sleep(3000);
         WebElement orderIDText = driver.findElement(By.xpath("//span[@class='order-header__order-number']"));
-        String orderedNow = orderIDText.getText();
-        System.out.println("Pick uped: "+orderedNow);
-//        orderedNow=orderedNow
+        String orderedNow = orderIDText.getText().substring(6, 20);
+        log.info("----------------------------------");
+        log.info("Run order: {}", orderedNow);
+        List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='order-line'] "));
+        for (WebElement element : baseOrderID
+        ) {
+            WebElement ean = element.findElement(By.xpath("./descendant::div[text()='EAN: ']"));
+            String eanToPick = ean.getText();
+            log.info("Picked {}", eanToPick);
+            WebElement picked = element.findElement(By.xpath("./descendant::button[contains(@class,'order-line__pick__button')]"));
+            picked.click();
+        }
+        WebElement printButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'documents-printing__button-print')]"));
+        printButton.click();
+        WebElement completeButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'order_fulfillment-button_complete')]"));
+        completeButton.click();
+        Thread.sleep(3000);
+        driver.navigate().refresh();
+        Thread.sleep(3000);
         return orderedNow;
     }
-
-
-
-
-    void pickAllEANPositions(String eanID) throws InterruptedException {
-        String myORDER = getOrderIDtoPicking();
-        WebElement eanPositionWebElement = driver.findElement(By.xpath(""));
-        eanPositionWebElement.click();
-
-    }
-
-
 }

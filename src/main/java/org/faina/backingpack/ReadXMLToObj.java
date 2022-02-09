@@ -9,21 +9,18 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 
 public class ReadXMLToObj {
     private final static Logger log = LoggerFactory.getLogger(ReadXMLToObj.class);
     private final String folder;
     private final String fileName;
-    private final String content;
 
     public ReadXMLToObj(String folder, String fileName) throws IOException {
         this.folder = folder;
         this.fileName = fileName;
-        content = readFileContent();
-        log.info("{} was read", fileName);
+        String content = readFileContent();
+        log.info("{} was read content: {}", fileName, content);
     }
 
     private String readFileContent() throws IOException {
@@ -45,6 +42,4 @@ public class ReadXMLToObj {
         System.out.println(question.getOrder_id());
         return question;
     }
-
-
 }
