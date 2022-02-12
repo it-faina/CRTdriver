@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverProvider {
 
     private static WebDriver driver;
-    private static WebDriverWait waitDriver;
+    private static WebDriver.Timeouts timeouts;
     private static final String CHROMEDRIVER = "chromedriver.exe";
 
     private WebDriverProvider() {
@@ -23,7 +23,8 @@ public class WebDriverProvider {
         driver.navigate().refresh();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Configurator.getImplicytyWait(), TimeUnit.SECONDS);
+        timeouts = driver.manage().timeouts().implicitlyWait(Configurator.getImplicytyWait(), TimeUnit.SECONDS);
+
     }
 
     /**
@@ -35,6 +36,9 @@ public class WebDriverProvider {
         return driver;
     }
 
+    public static WebDriver.Timeouts getTimeouts() {
+        return timeouts;
+    }
 
     /**
      * Method to quit WebDriver

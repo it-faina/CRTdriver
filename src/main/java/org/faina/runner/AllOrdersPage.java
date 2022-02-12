@@ -8,8 +8,8 @@ import java.util.List;
 
 public class AllOrdersPage extends OrderPage {
 
-    public AllOrdersPage(WebDriver driver) {
-        super(driver);
+    public AllOrdersPage(WebDriver driver, WebDriver.Timeouts timeouts) {
+        super(driver, timeouts);
     }
 
     void clickSearchButton(String searchIDOrder) throws InterruptedException {
@@ -48,7 +48,7 @@ public class AllOrdersPage extends OrderPage {
                 System.out.println("found element on the list at the position " + eanElementOnOrderList);
                 WebElement hereClickToMarkReturned = driver.findElement(By.xpath("//section[" + eanElementOnOrderList + "]/div/div/section/div[@class='order-line__article-ean']/following::button[1]"));
                 hereClickToMarkReturned.click();
-                WebElement doesntSuite = driver.findElement(By.xpath("//section["+eanElementOnOrderList+"]/div/div/section/div[@class='order-line__article-ean']/preceding::div[@class='v-list__tile__title' and contains(text(),'2. Too big')]["+eanElementOnOrderList+"]"));
+                WebElement doesntSuite = driver.findElement(By.xpath("//section[" + eanElementOnOrderList + "]/div/div/section/div[@class='order-line__article-ean']/preceding::div[@class='v-list__tile__title' and contains(text(),'2. Too big')][" + eanElementOnOrderList + "]"));
                 doesntSuite.click();
             }
             eanElementOnOrderList++;
@@ -56,11 +56,9 @@ public class AllOrdersPage extends OrderPage {
         return ean;
     }
 
-
     public void clickCancel() throws InterruptedException {
         Thread.sleep(2000);
         WebElement cancelButton = driver.findElement(By.xpath("//button//div[@class='v-btn__content' and contains(text(),'Cancel')]"));
         cancelButton.click();
     }
-
 }

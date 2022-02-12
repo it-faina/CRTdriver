@@ -2,6 +2,7 @@ package org.faina.runner;
 
 import org.faina.configuration.Configurator;
 import org.faina.configuration.Credentials;
+import org.faina.configuration.Mode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,9 +13,8 @@ public class AppStartAsUser {
     final static Logger log = LoggerFactory.getLogger(AppStartAsUser.class);
 
     public static void main(String[] args) throws InterruptedException {
-        log.info("--------------###############--------------");
-        log.info("CRT Service started");
-        Enum currentCRTchannel = NO_CHANEL;
+        log.info("------------CRT robot started------------");
+        Enum<Mode> currentCRTchannel = NO_CHANEL;
         if (Configurator.getServicedChanel().equals("HAMBURG")) {
             currentCRTchannel = HAMBURG;
         }
@@ -24,17 +24,16 @@ public class AppStartAsUser {
 
         if (currentCRTchannel != NO_CHANEL) {
             log.info("Order execution for {}", currentCRTchannel.name());
-
             LoginPage loggedPage = new LoginPage();
             Credentials userCredentials = new Credentials(currentCRTchannel);
             OrderPage orderPage = loggedPage.loginAsUser(userCredentials);
             orderPage.clickOkCookies();
-            for (int i = 0; i < 3; i++) {
-                String ordered = orderPage.getOrderIDtoPicking();
-                System.out.println(ordered);
+            while (orderPage.isNextOrderToPick()) {
+                System.out.println(orderPage.getOrderIDtoPicking());
             }
+
             loggedPage.stopWebDriver();
         }
-        log.info("CRT service stopped");
+        log.info("###########-CRT robot stopped-###########");
     }
 }

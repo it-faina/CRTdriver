@@ -15,6 +15,7 @@ public class LoginPage {
     public OrderPage loginAsUser(Credentials loggedCRTCredentials) {
         WebDriverProvider.start();
         WebDriver driver = WebDriverProvider.getDriver();
+        WebDriver.Timeouts timeouts=WebDriverProvider.getTimeouts();
         driver.navigate().to(Configurator.getLandingPage());
         WebElement userName = driver.findElement(By.xpath("//input[@id='1-email']"));
         userName.sendKeys(loggedCRTCredentials.getLogin());
@@ -23,12 +24,11 @@ public class LoginPage {
         WebElement button = driver.findElement(By.xpath("//*[@id='auth0-lock-container-1']/div/div[2]/form/div/div/div/button"));
         button.click();
         log.info("Logged {} channel.", loggedCRTCredentials.getConnectedRetailInfo());
-        return new OrderPage(driver);
+        return new OrderPage(driver, timeouts);
     }
 
-
     void stopWebDriver() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         WebDriverProvider.quit();
     }
 }

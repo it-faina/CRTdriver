@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CRTdriver:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="one_login_mode - auto ordering for three orders done">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/CRTdriver_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/faina/CRTTestsCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/AppSandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/AppSandbox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/ExamplePageTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/backingpack/ReadXMLToObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/backingpack/ReadXMLToObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Credentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Mode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Mode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/AppSandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/tools/CRTConnectionTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AllOrdersPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/AppSandboxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/AppSandboxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/CRTAccessWebDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/CRTAccessWebDriverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/WebDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/faina/WebDriverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/AppSandboxTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/CRTAccessWebDriverTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/SpecialCherecters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/faina/WebDriverTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/ExamplePageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/backingpack/ReadXMLToObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/backingpack/ReadXMLToObj.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/faina/CRTAccessWebDriverTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/faina/SpecialCherecters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/faina/WebDriverTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +69,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38045976" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
@@ -72,33 +83,12 @@
       <recent name="C:\Users\Faina04\IdeaProj_Ultimate\CRT\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AppSandboxTest">
-    <configuration name="AppCRTPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.faina.AppCRTPage" />
-      <module name="CRTdriver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.faina.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppSandbox" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.faina.AppSandbox" />
-      <module name="CRTdriver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.faina.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AppStartAsUser">
     <configuration name="AppStartAsUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.faina.runner.AppStartAsUser" />
       <module name="CRTdriver" />
@@ -112,20 +102,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpecialCherecters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.faina.SpecialCherecters" />
+    <configuration name="CRTConnectionTestsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CRTdriver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.faina.runner.*" />
+          <option name="PATTERN" value="org.faina.tools.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.faina" />
+      <option name="MAIN_CLASS_NAME" value="org.faina.CRTConnectionTestsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppSandboxTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CRTConnectionTestsTest.logShouldBeAddedAsAFile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.faina" />
+      <option name="MAIN_CLASS_NAME" value="org.faina.CRTConnectionTestsTest" />
+      <option name="METHOD_NAME" value="logShouldBeAddedAsAFile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CRTTestsCaseTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CRTdriver" />
       <extension name="coverage">
         <pattern>
@@ -134,7 +146,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.faina" />
-      <option name="MAIN_CLASS_NAME" value="org.faina.AppSandboxTest" />
+      <option name="MAIN_CLASS_NAME" value="org.faina.CRTTestsCaseTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -142,20 +154,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CRTTestsCaseTest.connectedRetailLandingPageIsAccessibleTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CRTdriver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.faina.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.faina" />
+      <option name="MAIN_CLASS_NAME" value="org.faina.CRTTestsCaseTest" />
+      <option name="METHOD_NAME" value="connectedRetailLandingPageIsAccessibleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.AppCRTPage" />
-      <item itemvalue="Application.SpecialCherecters" />
-      <item itemvalue="Application.AppSandbox" />
+      <item itemvalue="TestNG.CRTConnectionTestsTest" />
+      <item itemvalue="TestNG.CRTConnectionTestsTest.logShouldBeAddedAsAFile" />
+      <item itemvalue="TestNG.CRTTestsCaseTest" />
+      <item itemvalue="TestNG.CRTTestsCaseTest.connectedRetailLandingPageIsAccessibleTest" />
       <item itemvalue="Application.AppStartAsUser" />
-      <item itemvalue="TestNG.AppSandboxTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AppSandboxTest" />
-        <item itemvalue="Application.AppSandbox" />
         <item itemvalue="Application.AppStartAsUser" />
-        <item itemvalue="Application.AppCRTPage" />
-        <item itemvalue="Application.SpecialCherecters" />
+        <item itemvalue="TestNG.CRTTestsCaseTest" />
+        <item itemvalue="TestNG.CRTTestsCaseTest.connectedRetailLandingPageIsAccessibleTest" />
+        <item itemvalue="TestNG.CRTConnectionTestsTest" />
+        <item itemvalue="TestNG.CRTConnectionTestsTest.logShouldBeAddedAsAFile" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +223,18 @@
       <workItem from="1644316181603" duration="1314000" />
       <workItem from="1644337783523" duration="945000" />
       <workItem from="1644347378008" duration="3000" />
-      <workItem from="1644347483945" duration="16113000" />
+      <workItem from="1644347483945" duration="16251000" />
+      <workItem from="1644396986138" duration="3444000" />
+      <workItem from="1644419730406" duration="2323000" />
+      <workItem from="1644462915107" duration="4336000" />
+      <workItem from="1644501427595" duration="27000" />
+      <workItem from="1644501478471" duration="1615000" />
+      <workItem from="1644534891954" duration="1872000" />
+      <workItem from="1644571354777" duration="468000" />
+      <workItem from="1644583128514" duration="458000" />
+      <workItem from="1644611865763" duration="6930000" />
+      <workItem from="1644655583720" duration="6998000" />
+      <workItem from="1644664100047" duration="14798000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -223,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644347578639</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="one_login_mode - auto ordering for three orders done">
+      <created>1644368535196</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644368535196</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,5 +294,21 @@
     <MESSAGE value="Selectors_refactoring - backup before simplification to one login" />
     <MESSAGE value="one_login_mode - auto ordering for three orders done" />
     <option name="LAST_COMMIT_MESSAGE" value="one_login_mode - auto ordering for three orders done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
