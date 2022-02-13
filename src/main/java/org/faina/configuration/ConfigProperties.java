@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * Class Config Properties for robot application
+ * set up application properties from config.properties file
+ */
 public class ConfigProperties {
     private static final Logger log = LoggerFactory.getLogger(ConfigProperties.class);
 
@@ -32,7 +36,6 @@ public class ConfigProperties {
         }
         return properties;
     }
-
 
     public static String getProperty(String propertyName, String defaultValue) {
         String propertyValue = getProperties().get(propertyName);

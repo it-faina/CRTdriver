@@ -29,6 +29,6 @@ public class ReturnEanDataPicker {
             ean = i.getEan();
             System.out.println(ean);
         }
-        log.info("wgrany plik");
+        log.info("entered file");
     }
 }

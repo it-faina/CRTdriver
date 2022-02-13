@@ -3,25 +3,25 @@ package org.faina.runner;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.time.Duration;
 import java.util.List;
 
+/**
+ * Class Order Page
+ * service order on CRT ordering page
+ */
 public class OrderPage extends LoginPage {
+    final static Logger log = LoggerFactory.getLogger(OrderPage.class);
+
     WebDriver driver;
     WebDriver.Timeouts timeouts;
-    private int orderManualCount = 0;
+
 
     public OrderPage(WebDriver driver, WebDriver.Timeouts timeouts) {
         this.driver = driver;
         this.timeouts = timeouts;
-    }
-
-    void showTopic() throws InterruptedException {
-        Thread.sleep(5000);
-        String title = driver.getTitle();
-        System.out.println("TITLE: " + title);
-
     }
 
     void clickOkCookies() throws InterruptedException {
@@ -29,7 +29,6 @@ public class OrderPage extends LoginPage {
         WebElement cookies = driver.findElement(By.xpath("//*[@id='uc-btn-accept-banner']"));
         cookies.click();
     }
-
 
     AllOrdersPage clickAllOrders() {
         WebElement allOrders = driver.findElement(By.xpath("//div[@class='v-tabs__div content__tab'][2]/a"));
@@ -42,22 +41,15 @@ public class OrderPage extends LoginPage {
         searchWebElement.sendKeys(orderID);
     }
 
-    /**
-     * use this method if you want pick orderManualCount-1 objects
-     *
-     * @return true - continue pickling; false stop picking
-     */
-    boolean isOrderToPick() {
-        orderManualCount++;
-        return orderManualCount != 4; // example if 4  then 3 orders will be picked
-    }
+
 
     boolean isNextOrderToPick() {
         try {
+            log.info("-------------------------");
             WebDriverWait webDriverWait = new WebDriverWait(driver, 5);
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='order-header__order-number']")));
         } catch (TimeoutException e) {
-            log.info("No fresh order to pick up");
+            log.info("No new order to pick up at this time");
             return false;
         }
         return true;
@@ -66,7 +58,7 @@ public class OrderPage extends LoginPage {
     String getOrderIDtoPicking() throws InterruptedException {
         WebElement orderIDText = driver.findElement(By.xpath("//span[@class='order-header__order-number']")); //if no this object create exception
         String orderedNow = orderIDText.getText().substring(6, 20);
-        log.info("------------------------");
+
         log.info("Run order: {}", orderedNow);
         List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='order-line'] "));
         String eanToPick = "init";
@@ -86,7 +78,8 @@ public class OrderPage extends LoginPage {
             } catch (Exception e) {
                 boolean isPupUpPresent = driver.findElement(By.xpath("//div[text()='Unselect picked?']")).isDisplayed();
                 if (isPupUpPresent) {
-                    log.info("pup up was shown at {}", eanToPick);
+                    log.error("COMPLITE button not active", e);
+                    log.info("pup up at {} serviced", eanToPick);
                     WebElement cancelButtonOnPupUpWindow = driver.findElement(By.xpath("//div[text()='Cancel']"));
                     cancelButtonOnPupUpWindow.click();
                 }
@@ -98,12 +91,12 @@ public class OrderPage extends LoginPage {
             try {
                 printButton.click();
             } catch (Exception e) {
-                log.info("Print Button not active");
+                log.error("PRINT button not active", e);
             }
             try {
                 completeButton.click();
             } catch (Exception e) {
-                log.info("COMPLETE button not active");
+                log.error("COMPLETE button not active", e);
             }
         }
         Thread.sleep(3000);

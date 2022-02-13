@@ -19,7 +19,7 @@ public class Configurator extends ConfigProperties {
     }
 
     public static String getServicedChanel() {
-        return getProperty("servicedChanel", "ROSTOCK");
+        return getProperty("servicedChanel", "HAMBURG");
     }
 
     public static String getHamburgUser() {
@@ -41,4 +41,12 @@ public class Configurator extends ConfigProperties {
     public static boolean getServiceOrderMode() {
         return getProperty("ServiceOrderMode", true);
     }
+
+    public static boolean getServiceToTheEndMode(){
+        return getProperty("serviceToTheEnd", true);
+    }
+    public static long getamountPickedOrders(){
+        return getProperty("amountPickedOrders",1);
+    }
+
 }
