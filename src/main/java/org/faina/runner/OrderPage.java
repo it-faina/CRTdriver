@@ -68,7 +68,10 @@ public class OrderPage extends LoginPage {
             eanToPick = ean.getText();
             log.info("Picked {}", eanToPick);
             WebElement picked = element.findElement(By.xpath("./descendant::button[contains(@class,'order-line__pick__button')]"));
-            picked.click();
+            //check if button was markeded (has a green color)
+            if (!picked.getAttribute("class").equals("order-line__pick__button v-btn v-btn--active v-btn--flat theme--light")){
+                picked.click();
+            }
         }
         WebElement completeButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'order_fulfillment-button_complete')]"));
         boolean isCompleteButtonEnabled = completeButton.isEnabled();

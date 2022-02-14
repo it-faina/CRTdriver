@@ -11,20 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="one_login_mode - Refactor, new function order to the end and amountPickedOrders done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/ConfigProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/StoreUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Mode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/StoreChanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/AppStartAsUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/tools/ReturnEanDataPicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/runner/AllOrdersPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="selectors_refactoring" />
+        <entry key="$PROJECT_DIR$" value="one_login_mode" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +76,7 @@
       <command value="mvn package" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CRTTestsCaseTest">
+  <component name="RunManager" selected="Application.RobotLoop">
     <configuration name="RobotLoop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.faina.runner.RobotLoop" />
       <module name="CRTdriver" />
@@ -181,8 +169,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CRTTestsCaseTest" />
         <item itemvalue="Application.RobotLoop" />
+        <item itemvalue="TestNG.CRTTestsCaseTest" />
         <item itemvalue="TestNG.CRTTestsCaseTest.logShouldAddChannelNameTest" />
         <item itemvalue="TestNG.CRTTestsCaseTest.connectedRetailLandingPageIsAccessibleTest" />
         <item itemvalue="TestNG.CRTConnectionTestsTest" />
@@ -238,7 +226,7 @@
       <workItem from="1644738151796" duration="7768000" />
       <workItem from="1644768953343" duration="2139000" />
       <workItem from="1644772820480" duration="2787000" />
-      <workItem from="1644789550605" duration="3364000" />
+      <workItem from="1644789550605" duration="7320000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -282,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644685119207</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="one_login_mode - Refactor, new function order to the end and amountPickedOrders done">
+      <created>1644792963294</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644792963294</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,5 +302,21 @@
     <MESSAGE value="one_login_mode - Pick up all existed orders on current channel done" />
     <MESSAGE value="one_login_mode - Refactor, new function order to the end and amountPickedOrders done" />
     <option name="LAST_COMMIT_MESSAGE" value="one_login_mode - Refactor, new function order to the end and amountPickedOrders done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
