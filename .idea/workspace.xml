@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="one_login_mode - Refactor, new function order to the end and amountPickedOrders done">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="multiEan_green_picked - fix bug -no clicking on green button done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +227,11 @@
       <workItem from="1644738151796" duration="7768000" />
       <workItem from="1644768953343" duration="2139000" />
       <workItem from="1644772820480" duration="2787000" />
-      <workItem from="1644789550605" duration="7320000" />
+      <workItem from="1644789550605" duration="8562000" />
+      <workItem from="1644799166343" duration="339000" />
+      <workItem from="1644820411688" duration="5000" />
+      <workItem from="1644820436474" duration="95000" />
+      <workItem from="1644836113228" duration="2166000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -277,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644792963294</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="multiEan_green_picked - fix bug -no clicking on green button done">
+      <created>1644797278153</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1644797278153</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,22 +313,7 @@
     <MESSAGE value="one_login_mode - auto ordering for three orders done" />
     <MESSAGE value="one_login_mode - Pick up all existed orders on current channel done" />
     <MESSAGE value="one_login_mode - Refactor, new function order to the end and amountPickedOrders done" />
-    <option name="LAST_COMMIT_MESSAGE" value="one_login_mode - Refactor, new function order to the end and amountPickedOrders done" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="multiEan_green_picked - fix bug -no clicking on green button done" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiEan_green_picked - fix bug -no clicking on green button done" />
   </component>
 </project>
