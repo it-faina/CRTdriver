@@ -4,7 +4,7 @@ import org.faina.configuration.Configurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 
 /**
@@ -25,7 +25,9 @@ public class WebDriverProvider {
         driver.navigate().refresh();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        timeouts = driver.manage().timeouts().implicitlyWait(Configurator.getImplicytyWait(), TimeUnit.SECONDS);
+        timeouts = driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Configurator.getImplicytyWait()));
+        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
     }
 
     /**

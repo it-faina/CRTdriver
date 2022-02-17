@@ -6,7 +6,9 @@ import org.faina.configuration.StoreChanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.faina.configuration.StoreChanel.*;
+import static org.faina.configuration.StoreChanel.HAMBURG;
+import static org.faina.configuration.StoreChanel.ROSTOCK;
+import static org.faina.configuration.StoreChanel.NO_CHANEL;
 
 /**
  * Class Robot Loop
@@ -54,10 +56,11 @@ public class RobotLoop {
         } else {
             return orderPickingCounter();
         }
+
     }
 
     /**
-     * use this method if you want pick orderManualCount-1 objects
+     * use this method if you want pick orderManualCount objects
      *
      * @return true - continue pickling; false stop picking
      */

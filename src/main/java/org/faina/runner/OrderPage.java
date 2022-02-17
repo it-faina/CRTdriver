@@ -1,11 +1,15 @@
 package org.faina.runner;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -46,7 +50,7 @@ public class OrderPage extends LoginPage {
     boolean isNextOrderToPick() {
         try {
             log.info("-------------------------");
-            WebDriverWait webDriverWait = new WebDriverWait(driver, 5);
+            WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(6));
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='order-header__order-number']")));
         } catch (TimeoutException e) {
             log.info("No new order to pick up at this time");

@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="multiEan_green_picked - fix bug -no clicking on green button done">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="selenium-lift-to-4: done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="one_login_mode" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -232,6 +236,12 @@
       <workItem from="1644820411688" duration="5000" />
       <workItem from="1644820436474" duration="95000" />
       <workItem from="1644836113228" duration="2166000" />
+      <workItem from="1644934754543" duration="34000" />
+      <workItem from="1644953960343" duration="86000" />
+      <workItem from="1644966130134" duration="37000" />
+      <workItem from="1644966184828" duration="207000" />
+      <workItem from="1645108410527" duration="1849000" />
+      <workItem from="1645131463384" duration="1595000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -314,6 +324,7 @@
     <MESSAGE value="one_login_mode - Pick up all existed orders on current channel done" />
     <MESSAGE value="one_login_mode - Refactor, new function order to the end and amountPickedOrders done" />
     <MESSAGE value="multiEan_green_picked - fix bug -no clicking on green button done" />
-    <option name="LAST_COMMIT_MESSAGE" value="multiEan_green_picked - fix bug -no clicking on green button done" />
+    <MESSAGE value="selenium-lift-to-4: done" />
+    <option name="LAST_COMMIT_MESSAGE" value="selenium-lift-to-4: done" />
   </component>
 </project>
