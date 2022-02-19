@@ -44,7 +44,6 @@ public class WebDriverProvider {
     }
 
 
-
     /**
      * Method to quit WebDriver
      */

@@ -27,7 +27,7 @@ public class LoginPage {
         password.sendKeys(loggedCRTStoreUser.getPassword());
         WebElement button = driver.findElement(By.xpath("//*[@id='auth0-lock-container-1']/div/div[2]/form/div/div/div/button"));
         button.click();
-        log.info("Logged {} channel.", loggedCRTStoreUser.getConnectedRetailInfo());
+        log.info("{} channel.", loggedCRTStoreUser.getConnectedRetailInfo());
         return new OrderPage(driver, timeouts);
     }
 

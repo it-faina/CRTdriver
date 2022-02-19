@@ -5,8 +5,8 @@ package org.faina.configuration.robotenums;
  */
 public enum LoginChanel {
 
-    HAMBURG("logged in CRT Hamburg"),
-    ROSTOCK("logged in CRT Rostock"),
+    HAMBURG("Logged in CRT Hamburg"),
+    ROSTOCK("Logged in CRT Rostock"),
     NO_CHANEL("No chanel was setup to login");
 
     private final String chanelDescription;

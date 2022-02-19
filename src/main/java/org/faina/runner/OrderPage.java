@@ -30,7 +30,7 @@ public class OrderPage extends LoginPage {
     }
 
     void clickOkCookies() throws InterruptedException {
-        sleep(4000);
+        sleepOrderPage(4000);
         WebElement cookies = driver.findElement(By.xpath("//*[@id='uc-btn-accept-banner']"));
         cookies.click();
     }
@@ -47,90 +47,99 @@ public class OrderPage extends LoginPage {
     }
 
 
-    boolean isNextOrderToPick() {
+    boolean isNextOrderToPick() throws NoMoreOrdersException {
         try {
             log.info("-------------------------");
             WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(6));
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='order-header__order-number']")));
         } catch (TimeoutException e) {
             log.info("No new order to pick up at this time");
-            return false;
+            throw new NoMoreOrdersException("no more orders found: ");
         }
         return true;
     }
 
-    public void setupProperShopChanel(ShopChanelTitle titleEnum) {
-        if (!isProperShopChanel(titleEnum)) {
+    public void setupProperShopChanel(ShopChanelTitle titleEnum) throws InterruptedException {
+
+        if (isNeedToChangeShopChannel(titleEnum)) {
             WebElement shopChanelButton = driver.findElement(By.xpath("//button[@class='v-toolbar__side-icon v-btn v-btn--icon theme--dark']"));
             shopChanelButton.click();
-            System.out.println("interesting if pressed button");
+            sleepOrderPage(1000);
+
             WebElement switchStorePullDownElement = driver.findElement(By.xpath("//div[text()='Switch store']"));
-            switchStorePullDownElement.click();
-            //todo
-        }
+            WebElement pullDownChecker = switchStorePullDownElement.findElement(By.xpath("./following::div[@class='v-list__group__items']"));
+            String menuOpened = pullDownChecker.getAttribute("style");
 
-    }
-
-    private boolean isProperShopChanel(ShopChanelTitle title) {
-        WebElement storeTitle = driver.findElement(By.xpath("//div[@data-test='active-store-name']"));
-        return storeTitle.getText().equals(title.getShopChanelTitle());
-    }
-
-    String getOrderIDtoPicking() throws InterruptedException {
-        WebElement orderIDText = driver.findElement(By.xpath("//span[@class='order-header__order-number']")); //if no this object create exception
-        String orderedNow = orderIDText.getText().substring(6, 20);
-
-        log.info("Run order: {}", orderedNow);
-        List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='order-line'] "));
-        String eanToPick = "init";
-        for (WebElement element : baseOrderID) {
-            WebElement ean = element.findElement(By.xpath("./descendant::div[text()='EAN: ']"));
-            eanToPick = ean.getText();
-            log.info("Picked {}", eanToPick);
-            WebElement picked = element.findElement(By.xpath("./descendant::button[contains(@class,'order-line__pick__button')]"));
-            //check if button was marked (has a green color)
-            if (!picked.getAttribute("class").equals("order-line__pick__button v-btn v-btn--active v-btn--flat theme--light")) {
-                picked.click();
+            if (menuOpened.equals("display: none;")) {
+                switchStorePullDownElement.click();
             }
-        }
-        WebElement completeButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'order_fulfillment-button_complete')]"));
-        boolean isCompleteButtonEnabled = completeButton.isEnabled();
-        if (isCompleteButtonEnabled) {
-            try {
-                completeButton.click();
-            } catch (Exception e) {
-                boolean isPupUpPresent = driver.findElement(By.xpath("//div[text()='Unselect picked?']")).isDisplayed();
-                if (isPupUpPresent) {
-                    log.error("COMPLITE button not active", e);
-                    log.info("pup up at {} serviced", eanToPick);
-                    WebElement cancelButtonOnPupUpWindow = driver.findElement(By.xpath("//div[text()='Cancel']"));
-                    cancelButtonOnPupUpWindow.click();
+
+            List<WebElement> shopsToChose = switchStorePullDownElement.findElements(By.xpath("./following::div[@data-test='list-of-store']/child::div[@role='listitem']"));
+            for (WebElement webElement : shopsToChose) {
+                WebElement shopToBeOperate = webElement.findElement(By.xpath(".//div/div"));
+                String shopPosition = shopToBeOperate.getText();
+                if (shopPosition.equals(titleEnum.getShopChanelTitle())) {
+                    shopToBeOperate.click();
+                    break;
                 }
-                Thread.sleep(2000);
-                completeButton.click();
-            }
-        } else {
-            WebElement printButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'documents-printing__button-print')]"));
-            try {
-                printButton.click();
-            } catch (Exception e) {
-                log.error("PRINT button not active", e);
-            }
-            try {
-                completeButton.click();
-            } catch (Exception e) {
-                log.error("COMPLETE button not active", e);
             }
         }
 
+        log.info("Shop to be operated: " + getCurrentShop());
+        sleepOrderPage(2000);
+    }
 
-        Thread.sleep(3000);
-        driver.navigate().refresh();
-        Thread.sleep(3000);
+
+    private boolean isNeedToChangeShopChannel(ShopChanelTitle title) throws InterruptedException {
+        String currentShop = getCurrentShop();
+        return !currentShop.equals(title.getShopChanelTitle());
+    }
+
+    private String getCurrentShop() throws InterruptedException {
+        sleepOrderPage(2000);
+        WebElement storeTitle = driver.findElement(By.xpath("//div[@data-test='active-store-name']"));
+        return storeTitle.getText();
+    }
+
+    public String getOrderIDtoPicking() throws InterruptedException, MyThrowableRepeatOrderException, NoMoreOrdersException {
+        WebElement orderIDText = driver.findElement(By.xpath("//span[@class='order-header__order-number']"));
+        String orderedNow = orderIDText.getText().substring(6, 20);
+        log.info("Run order: {}", orderedNow);
+
+        try {
+            List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='order-line'] "));
+            String eanToPick;
+
+            for (WebElement element : baseOrderID) {
+                WebElement ean = element.findElement(By.xpath("./descendant::div[text()='EAN: ']"));
+                eanToPick = ean.getText();
+                log.info("Picked {}", eanToPick);
+                WebElement picked = element.findElement(By.xpath("./descendant::button[contains(@class,'order-line__pick__button')]"));
+                //check if button was marked (has a green color)
+                if (!picked.getAttribute("class").equals("order-line__pick__button v-btn v-btn--active v-btn--flat theme--light")) {
+                    picked.click();
+                }
+            }
+
+            WebElement printButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'documents-printing__button-print')]"));
+            printButton.click();
+
+            WebElement completeButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'order_fulfillment-button_complete')]"));
+            completeButton.click();
+
+        } catch (Exception exception) {
+            log.error("error in complete after printing ", exception);
+            throw new MyThrowableRepeatOrderException("repeat this order");
+
+        } finally {
+            sleepOrderPage(1000);
+            driver.navigate().refresh();
+            sleepOrderPage(3000);
+        }
         return orderedNow;
     }
 
-    public void sleep(long milliseconds) throws InterruptedException {
+    public void sleepOrderPage(long milliseconds) throws InterruptedException {
         Thread.sleep(milliseconds);
     }
 }

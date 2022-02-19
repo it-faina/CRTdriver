@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import static org.faina.configuration.robotenums.LoginChanel.HAMBURG;
 import static org.faina.configuration.robotenums.LoginChanel.ROSTOCK;
 import static org.faina.configuration.robotenums.LoginChanel.NO_CHANEL;
+import static org.faina.configuration.robotenums.ShopChanelTitle.*;
 
 /**
  * Class Robot Loop
@@ -23,8 +24,8 @@ public class RobotLoop {
     private static int orderCounter = 0;
     private static final long orderAmount = Configurator.getAmountPickedOrders();
 
-    public static void main(String[] args) throws InterruptedException {
-        log.info("----CRT robot started----");
+    public static void main(String[] args) throws InterruptedException, MyThrowableRepeatOrderException {
+        log.info("----CRT robot started-v2-");
         Enum<LoginChanel> currentCRTchannel = NO_CHANEL;
         if (Configurator.getLoginServicedChanel().equals("HAMBURG")) {
             currentCRTchannel = HAMBURG;
@@ -34,42 +35,56 @@ public class RobotLoop {
         }
 
         if (currentCRTchannel != NO_CHANEL) {
-            serviceShopChanel(currentCRTchannel);
+            serviceShopChanel(currentCRTchannel);  //entry to the service
         }
         log.info("###-CRT robot stopped-###");
     }
 
-    private static void serviceShopChanel(Enum<LoginChanel> storeChanelEnum) throws InterruptedException {
+    private static void serviceShopChanel(Enum<LoginChanel> storeChanelEnum) throws InterruptedException, MyThrowableRepeatOrderException {
         log.info("Ordering for {}", storeChanelEnum.name());
         LoginPage loggedPage = new LoginPage();
         StoreUser userStoreUser = new StoreUser(storeChanelEnum);
         OrderPage orderPage = loggedPage.loginAsUser(userStoreUser);
         orderPage.clickOkCookies();
         ArrayList<ShopChanelTitle> shopingSequence = new ArrayList<>();
-        shopingSequence.add(ShopChanelTitle.SHOP_CHANEL2);
-        shopingSequence.add(ShopChanelTitle.SHOP_CHANEL1);
-        shopingSequence.add(ShopChanelTitle.SHOP_CHANEL3);
 
-        for (ShopChanelTitle title : shopingSequence) {
-            orderPage.setupProperShopChanel(title);
-            while (continueLoop(orderPage)) {
-
-                System.out.println(orderPage.getOrderIDtoPicking());
-            }
+        if (!SHOP_CHANEL1.getShopChanelTitle().equals(SKIP_CHANEL.getShopChanelTitle())) {
+            shopingSequence.add(SHOP_CHANEL1);
+        }
+        if (!SHOP_CHANEL2.getShopChanelTitle().equals(SKIP_CHANEL.getShopChanelTitle())) {
+            shopingSequence.add(SHOP_CHANEL2);
+        }
+        if (!SHOP_CHANEL3.getShopChanelTitle().equals(SKIP_CHANEL.getShopChanelTitle())) {
+            shopingSequence.add(SHOP_CHANEL3);
         }
 
 
+        for (ShopChanelTitle title : shopingSequence) {
+            try {
+                orderPage.setupProperShopChanel(title);
+                while (continueLoop(orderPage)) {
+                    try {
+                        String currentOrder = orderPage.getOrderIDtoPicking();
+                        System.out.println(currentOrder);
+                    } catch (MyThrowableRepeatOrderException myThrowableRepeatOrderException) {
+                        String currentOrder = orderPage.getOrderIDtoPicking();
+                        System.out.println("repeated " + currentOrder);
+                    }
+
+                }
+            } catch (NoMoreOrdersException noMoreOrders) {
+                log.info("No orders on this channel");
+            }
+        }
         loggedPage.quitLoginPage();
     }
 
-
-    private static boolean continueLoop(OrderPage orderPage) {
+    private static boolean continueLoop(OrderPage orderPage) throws NoMoreOrdersException {
         if (Configurator.getServiceToTheEndMode()) {
             return orderPage.isNextOrderToPick();
         } else {
             return orderPickingCounter();
         }
-
     }
 
     /**
@@ -80,10 +95,10 @@ public class RobotLoop {
     private static boolean orderPickingCounter() {
         boolean pickNext = false;
         orderCounter++;
-        if (orderCounter != (orderAmount + 1)) {
+        if (orderCounter < (orderAmount + 1)) {
             pickNext = true;
             log.info("-------------------------");
-            log.info("processing {} / {}", orderCounter, orderAmount);
+            log.info("Manual odrering: processing {} / {}", orderCounter, orderAmount);
         }
         return pickNext;
     }

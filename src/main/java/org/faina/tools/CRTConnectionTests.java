@@ -15,5 +15,4 @@ public class CRTConnectionTests {
         System.out.println(Configurator.getWebdriverDir());
         System.out.println(Configurator.getImplicytyWait());
     }
-
 }
