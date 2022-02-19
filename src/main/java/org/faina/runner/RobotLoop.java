@@ -2,13 +2,16 @@ package org.faina.runner;
 
 import org.faina.configuration.Configurator;
 import org.faina.configuration.StoreUser;
-import org.faina.configuration.StoreChanel;
+import org.faina.configuration.robotenums.LoginChanel;
+import org.faina.configuration.robotenums.ShopChanelTitle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.faina.configuration.StoreChanel.HAMBURG;
-import static org.faina.configuration.StoreChanel.ROSTOCK;
-import static org.faina.configuration.StoreChanel.NO_CHANEL;
+import java.util.ArrayList;
+
+import static org.faina.configuration.robotenums.LoginChanel.HAMBURG;
+import static org.faina.configuration.robotenums.LoginChanel.ROSTOCK;
+import static org.faina.configuration.robotenums.LoginChanel.NO_CHANEL;
 
 /**
  * Class Robot Loop
@@ -18,15 +21,15 @@ import static org.faina.configuration.StoreChanel.NO_CHANEL;
 public class RobotLoop {
     final static Logger log = LoggerFactory.getLogger(RobotLoop.class);
     private static int orderCounter = 0;
-    private static final long orderAmount = Configurator.getamountPickedOrders();
+    private static final long orderAmount = Configurator.getAmountPickedOrders();
 
     public static void main(String[] args) throws InterruptedException {
         log.info("----CRT robot started----");
-        Enum<StoreChanel> currentCRTchannel = NO_CHANEL;
-        if (Configurator.getServicedChanel().equals("HAMBURG")) {
+        Enum<LoginChanel> currentCRTchannel = NO_CHANEL;
+        if (Configurator.getLoginServicedChanel().equals("HAMBURG")) {
             currentCRTchannel = HAMBURG;
         }
-        if (Configurator.getServicedChanel().equals("ROSTOCK")) {
+        if (Configurator.getLoginServicedChanel().equals("ROSTOCK")) {
             currentCRTchannel = ROSTOCK;
         }
 
@@ -36,19 +39,29 @@ public class RobotLoop {
         log.info("###-CRT robot stopped-###");
     }
 
-    private static void serviceShopChanel(Enum<StoreChanel> storeChanelEnum) throws InterruptedException {
+    private static void serviceShopChanel(Enum<LoginChanel> storeChanelEnum) throws InterruptedException {
         log.info("Ordering for {}", storeChanelEnum.name());
         LoginPage loggedPage = new LoginPage();
         StoreUser userStoreUser = new StoreUser(storeChanelEnum);
         OrderPage orderPage = loggedPage.loginAsUser(userStoreUser);
         orderPage.clickOkCookies();
+        ArrayList<ShopChanelTitle> shopingSequence = new ArrayList<>();
+        shopingSequence.add(ShopChanelTitle.SHOP_CHANEL2);
+        shopingSequence.add(ShopChanelTitle.SHOP_CHANEL1);
+        shopingSequence.add(ShopChanelTitle.SHOP_CHANEL3);
 
-        while (continueLoop(orderPage)) {
+        for (ShopChanelTitle title : shopingSequence) {
+            orderPage.setupProperShopChanel(title);
+            while (continueLoop(orderPage)) {
 
-            System.out.println(orderPage.getOrderIDtoPicking());
+                System.out.println(orderPage.getOrderIDtoPicking());
+            }
         }
-        loggedPage.stopLoginPage();
+
+
+        loggedPage.quitLoginPage();
     }
+
 
     private static boolean continueLoop(OrderPage orderPage) {
         if (Configurator.getServiceToTheEndMode()) {

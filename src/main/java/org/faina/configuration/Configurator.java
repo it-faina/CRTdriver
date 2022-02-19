@@ -18,8 +18,20 @@ public class Configurator extends ConfigProperties {
         return getProperty("landingPage", "http://www.faina-lifestyle.pl/");
     }
 
-    public static String getServicedChanel() {
-        return getProperty("servicedChanel", "HAMBURG");
+    public static String getLoginServicedChanel() {
+        return getProperty("loginToChanel", "Default Login");
+    }
+
+    public static String getShopChanel1Title() {
+        return getProperty("shopChanel1Title", "Default with logged user");
+    }
+
+    public static String getShopChanel2Title() {
+        return getProperty("shopChanel2Title", "EMPTY");
+    }
+
+    public static String getShopChanel3Title() {
+        return getProperty("shopChanel3Title", "EMPTY");
     }
 
     public static String getHamburgUser() {
@@ -42,11 +54,12 @@ public class Configurator extends ConfigProperties {
         return getProperty("ServiceOrderMode", true);
     }
 
-    public static boolean getServiceToTheEndMode(){
+    public static boolean getServiceToTheEndMode() {
         return getProperty("serviceToTheEnd", true);
     }
-    public static long getamountPickedOrders(){
-        return getProperty("amountPickedOrders",1);
+
+    public static long getAmountPickedOrders() {
+        return getProperty("amountPickedOrders", 1);
     }
 
 }

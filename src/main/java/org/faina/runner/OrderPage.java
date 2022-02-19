@@ -1,5 +1,6 @@
 package org.faina.runner;
 
+import org.faina.configuration.robotenums.ShopChanelTitle;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +30,7 @@ public class OrderPage extends LoginPage {
     }
 
     void clickOkCookies() throws InterruptedException {
-        Thread.sleep(4000);
+        sleep(4000);
         WebElement cookies = driver.findElement(By.xpath("//*[@id='uc-btn-accept-banner']"));
         cookies.click();
     }
@@ -46,7 +47,6 @@ public class OrderPage extends LoginPage {
     }
 
 
-
     boolean isNextOrderToPick() {
         try {
             log.info("-------------------------");
@@ -59,6 +59,23 @@ public class OrderPage extends LoginPage {
         return true;
     }
 
+    public void setupProperShopChanel(ShopChanelTitle titleEnum) {
+        if (!isProperShopChanel(titleEnum)) {
+            WebElement shopChanelButton = driver.findElement(By.xpath("//button[@class='v-toolbar__side-icon v-btn v-btn--icon theme--dark']"));
+            shopChanelButton.click();
+            System.out.println("interesting if pressed button");
+            WebElement switchStorePullDownElement = driver.findElement(By.xpath("//div[text()='Switch store']"));
+            switchStorePullDownElement.click();
+            //todo
+        }
+
+    }
+
+    private boolean isProperShopChanel(ShopChanelTitle title) {
+        WebElement storeTitle = driver.findElement(By.xpath("//div[@data-test='active-store-name']"));
+        return storeTitle.getText().equals(title.getShopChanelTitle());
+    }
+
     String getOrderIDtoPicking() throws InterruptedException {
         WebElement orderIDText = driver.findElement(By.xpath("//span[@class='order-header__order-number']")); //if no this object create exception
         String orderedNow = orderIDText.getText().substring(6, 20);
@@ -66,14 +83,13 @@ public class OrderPage extends LoginPage {
         log.info("Run order: {}", orderedNow);
         List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='order-line'] "));
         String eanToPick = "init";
-        for (WebElement element : baseOrderID
-        ) {
+        for (WebElement element : baseOrderID) {
             WebElement ean = element.findElement(By.xpath("./descendant::div[text()='EAN: ']"));
             eanToPick = ean.getText();
             log.info("Picked {}", eanToPick);
             WebElement picked = element.findElement(By.xpath("./descendant::button[contains(@class,'order-line__pick__button')]"));
-            //check if button was markeded (has a green color)
-            if (!picked.getAttribute("class").equals("order-line__pick__button v-btn v-btn--active v-btn--flat theme--light")){
+            //check if button was marked (has a green color)
+            if (!picked.getAttribute("class").equals("order-line__pick__button v-btn v-btn--active v-btn--flat theme--light")) {
                 picked.click();
             }
         }
@@ -106,9 +122,15 @@ public class OrderPage extends LoginPage {
                 log.error("COMPLETE button not active", e);
             }
         }
+
+
         Thread.sleep(3000);
         driver.navigate().refresh();
         Thread.sleep(3000);
         return orderedNow;
+    }
+
+    public void sleep(long milliseconds) throws InterruptedException {
+        Thread.sleep(milliseconds);
     }
 }

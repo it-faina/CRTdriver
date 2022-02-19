@@ -43,6 +43,8 @@ public class WebDriverProvider {
         return timeouts;
     }
 
+
+
     /**
      * Method to quit WebDriver
      */

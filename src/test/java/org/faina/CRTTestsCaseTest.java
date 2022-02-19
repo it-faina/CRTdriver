@@ -39,7 +39,7 @@ public class CRTTestsCaseTest {
      */
     @Test
     public void logShouldAddChannelNameTest() {
-        log.info("**Test log message for {} chanel**", Configurator.getServicedChanel());
+        log.info("**Test log message for {} chanel**", Configurator.getLoginServicedChanel());
         assertTrue(true);
     }
 

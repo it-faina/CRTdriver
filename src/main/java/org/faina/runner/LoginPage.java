@@ -31,7 +31,7 @@ public class LoginPage {
         return new OrderPage(driver, timeouts);
     }
 
-    void stopLoginPage() throws InterruptedException {
+    void quitLoginPage() throws InterruptedException {
         Thread.sleep(3000);
         WebDriverProvider.quit();
     }

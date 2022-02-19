@@ -1,14 +1,16 @@
 package org.faina.configuration;
 
-import static org.faina.configuration.StoreChanel.HAMBURG;
-import static org.faina.configuration.StoreChanel.ROSTOCK;
+import org.faina.configuration.robotenums.LoginChanel;
+
+import static org.faina.configuration.robotenums.LoginChanel.HAMBURG;
+import static org.faina.configuration.robotenums.LoginChanel.ROSTOCK;
 
 public class StoreUser {
     private final String login;
     private final String password;
     private final String connectedRetailInfo;
 
-    public StoreUser(Enum<StoreChanel> crtChannel) {
+    public StoreUser(Enum<LoginChanel> crtChannel) {
         if (crtChannel == HAMBURG) {
             login = Configurator.getHamburgUser();
             password = Configurator.getHamburgPass();

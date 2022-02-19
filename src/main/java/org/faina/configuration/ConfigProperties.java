@@ -23,6 +23,7 @@ public class ConfigProperties {
         Properties property = new Properties();
         Map<String, String> properties = new HashMap<>();
         InputStream input = ClassLoader.getSystemResourceAsStream("config.properties");
+
         if (input == null) {
             log.info("Cannot find config.properties file");
         }
@@ -40,7 +41,7 @@ public class ConfigProperties {
     public static String getProperty(String propertyName, String defaultValue) {
         String propertyValue = getProperties().get(propertyName);
         if (propertyValue == null) {
-            log.info("value of {} is null", propertyName);
+            log.info("value of {} is null", propertyName); //repeated logger
             try {
                 throw new PropertyNotFoundException(propertyName + " not found");
             } catch (PropertyNotFoundException e) {
