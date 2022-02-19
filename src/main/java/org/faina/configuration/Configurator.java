@@ -61,5 +61,4 @@ public class Configurator extends ConfigProperties {
     public static long getAmountPickedOrders() {
         return getProperty("amountPickedOrders", 1);
     }
-
 }

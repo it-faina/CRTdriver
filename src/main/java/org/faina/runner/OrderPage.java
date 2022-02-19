@@ -61,17 +61,19 @@ public class OrderPage extends LoginPage {
 
     public void setupProperShopChanel(ShopChanelTitle titleEnum) throws InterruptedException {
 
-        if (isNeedToChangeShopChannel(titleEnum)) {
+        if (!isTheSameNameShopChannel(titleEnum)) {
             WebElement shopChanelButton = driver.findElement(By.xpath("//button[@class='v-toolbar__side-icon v-btn v-btn--icon theme--dark']"));
             shopChanelButton.click();
             sleepOrderPage(1000);
 
             WebElement switchStorePullDownElement = driver.findElement(By.xpath("//div[text()='Switch store']"));
+            sleepOrderPage(1000);
             WebElement pullDownChecker = switchStorePullDownElement.findElement(By.xpath("./following::div[@class='v-list__group__items']"));
             String menuOpened = pullDownChecker.getAttribute("style");
 
             if (menuOpened.equals("display: none;")) {
                 switchStorePullDownElement.click();
+                sleepOrderPage(1000);
             }
 
             List<WebElement> shopsToChose = switchStorePullDownElement.findElements(By.xpath("./following::div[@data-test='list-of-store']/child::div[@role='listitem']"));
@@ -80,6 +82,7 @@ public class OrderPage extends LoginPage {
                 String shopPosition = shopToBeOperate.getText();
                 if (shopPosition.equals(titleEnum.getShopChanelTitle())) {
                     shopToBeOperate.click();
+                    sleepOrderPage(1000);
                     break;
                 }
             }
@@ -90,9 +93,9 @@ public class OrderPage extends LoginPage {
     }
 
 
-    private boolean isNeedToChangeShopChannel(ShopChanelTitle title) throws InterruptedException {
+    private boolean isTheSameNameShopChannel(ShopChanelTitle title) throws InterruptedException {
         String currentShop = getCurrentShop();
-        return !currentShop.equals(title.getShopChanelTitle());
+        return currentShop.equals(title.getShopChanelTitle());
     }
 
     private String getCurrentShop() throws InterruptedException {

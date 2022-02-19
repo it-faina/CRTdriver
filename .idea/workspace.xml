@@ -9,19 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="selenium-lift-to-4: temp commit - before try-catch for 8 channels service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/MyThrowableRepeatOrderException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/NoMoreOrdersException.java" afterDir="false" />
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="add-new-crt-channels: multi Rostock done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/LoginChanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/LoginChanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/ShopChanelTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/ShopChanelTitle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/tools/CRTConnectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/tools/CRTConnectionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +240,7 @@
       <workItem from="1645108410527" duration="1849000" />
       <workItem from="1645131463384" duration="12851000" />
       <workItem from="1645259507640" duration="1218000" />
-      <workItem from="1645284232653" duration="24165000" />
+      <workItem from="1645284232653" duration="27121000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -319,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645286141898</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add-new-crt-channels: multi Rostock done">
+      <created>1645309045973</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1645309045973</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +346,8 @@
     <MESSAGE value="multiEan_green_picked - fix bug -no clicking on green button done" />
     <MESSAGE value="selenium-lift-to-4: done" />
     <MESSAGE value="selenium-lift-to-4: temp commit - before try-catch for 8 channels service" />
-    <option name="LAST_COMMIT_MESSAGE" value="selenium-lift-to-4: temp commit - before try-catch for 8 channels service" />
+    <MESSAGE value="add-new-crt-channels: multi Rostock done" />
+    <option name="LAST_COMMIT_MESSAGE" value="add-new-crt-channels: multi Rostock done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -355,6 +356,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
           <line>63</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
