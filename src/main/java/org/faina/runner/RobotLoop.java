@@ -76,6 +76,7 @@ public class RobotLoop {
                 log.info("No orders on this channel");
             }
         }
+        orderPage.logoutOrderPage();
         loggedPage.quitLoginPage();
     }
 

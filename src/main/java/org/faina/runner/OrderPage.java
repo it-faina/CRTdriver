@@ -145,4 +145,13 @@ public class OrderPage extends LoginPage {
     public void sleepOrderPage(long milliseconds) throws InterruptedException {
         Thread.sleep(milliseconds);
     }
+
+    public void logoutOrderPage() throws InterruptedException {
+        WebElement shopChanelButton = driver.findElement(By.xpath("//button[@class='v-toolbar__side-icon v-btn v-btn--icon theme--dark']"));
+        shopChanelButton.click();
+        sleepOrderPage(1000);
+        WebElement logoutButton=driver.findElement(By.xpath("//a/div[text()='Logout']"));
+        logoutButton.click();
+        log.info("Logged out from the shop service");
+    }
 }
