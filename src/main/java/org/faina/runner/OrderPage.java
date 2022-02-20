@@ -50,7 +50,7 @@ public class OrderPage extends LoginPage {
     boolean isNextOrderToPick() throws NoMoreOrdersException {
         try {
             log.info("-------------------------");
-            WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(6));
+            WebDriverWait webDriverWait = new WebDriverWait(driver, 6);
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='order-header__order-number']")));
         } catch (TimeoutException e) {
             log.info("No new order to pick up at this time");
