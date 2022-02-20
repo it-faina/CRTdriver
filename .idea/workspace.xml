@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="add-new-crt-channels: v2 multi ROSTOCK done">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="rostock-with-logout: v2 multi ROSTOCK done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="selenium-lift-to-4" />
+        <entry key="$PROJECT_DIR$" value="hamburg-with-logout" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,11 +168,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RobotLoop" />
-        <item itemvalue="TestNG.CRTTestsCaseTest" />
         <item itemvalue="TestNG.CRTTestsCaseTest.logShouldAddChannelNameTest" />
         <item itemvalue="TestNG.CRTTestsCaseTest.connectedRetailLandingPageIsAccessibleTest" />
+        <item itemvalue="TestNG.CRTTestsCaseTest" />
         <item itemvalue="TestNG.CRTConnectionTestsTest" />
+        <item itemvalue="Application.RobotLoop" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +238,7 @@
       <workItem from="1645131463384" duration="12851000" />
       <workItem from="1645259507640" duration="1218000" />
       <workItem from="1645284232653" duration="27541000" />
-      <workItem from="1645348606612" duration="2405000" />
+      <workItem from="1645348606612" duration="3743000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -340,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645311816571</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="rostock-with-logout: v2 multi ROSTOCK done">
+      <created>1645351277153</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1645351277153</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +375,8 @@
     <MESSAGE value="add-new-crt-channels: multi Rostock done" />
     <MESSAGE value="add-new-crt-channels: v2 multi HAMBURG done" />
     <MESSAGE value="add-new-crt-channels: v2 multi ROSTOCK done" />
-    <option name="LAST_COMMIT_MESSAGE" value="add-new-crt-channels: v2 multi ROSTOCK done" />
+    <MESSAGE value="rostock-with-logout: v2 multi ROSTOCK done" />
+    <option name="LAST_COMMIT_MESSAGE" value="rostock-with-logout: v2 multi ROSTOCK done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
