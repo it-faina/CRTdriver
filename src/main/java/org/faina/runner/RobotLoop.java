@@ -9,9 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
-import static org.faina.configuration.robotenums.LoginChanel.HAMBURG;
-import static org.faina.configuration.robotenums.LoginChanel.ROSTOCK;
-import static org.faina.configuration.robotenums.LoginChanel.NO_CHANEL;
+import static org.faina.configuration.robotenums.LoginChanel.*;
 import static org.faina.configuration.robotenums.ShopChanelTitle.*;
 
 /**
@@ -26,12 +24,19 @@ public class RobotLoop {
 
     public static void main(String[] args) throws InterruptedException, MyThrowableRepeatOrderException {
         log.info("----CRT robot started-v2-");
-        Enum<LoginChanel> currentCRTchannel = NO_CHANEL;
+        LoginChanel currentCRTchannel = NO_CHANEL;
+
         if (Configurator.getLoginServicedChanel().equals("HAMBURG")) {
             currentCRTchannel = HAMBURG;
         }
         if (Configurator.getLoginServicedChanel().equals("ROSTOCK")) {
             currentCRTchannel = ROSTOCK;
+        }
+        if (Configurator.getLoginServicedChanel().equals("DREIMASTER")) {
+            currentCRTchannel = DREIMASTER;
+        }
+        if (Configurator.getLoginServicedChanel().equals("MYMO")) {
+            currentCRTchannel = MYMO;
         }
 
         if (currentCRTchannel != NO_CHANEL) {
@@ -40,7 +45,7 @@ public class RobotLoop {
         log.info("###-CRT robot stopped-###");
     }
 
-    private static void serviceShopChanel(Enum<LoginChanel> storeChanelEnum) throws InterruptedException, MyThrowableRepeatOrderException {
+    private static void serviceShopChanel(LoginChanel storeChanelEnum) throws InterruptedException, MyThrowableRepeatOrderException {
         log.info("Ordering for {}", storeChanelEnum.name());
         LoginPage loggedPage = new LoginPage();
         StoreUser userStoreUser = new StoreUser(storeChanelEnum);

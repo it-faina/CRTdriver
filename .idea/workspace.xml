@@ -9,14 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="rostock-with-logout: v2 multi ROSTOCK done">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="rostock-withlogout: back to selenium ver 3.141.59 current config - HAMBURG">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/StoreUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/StoreUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/LoginChanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/LoginChanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/webdriver/WebDriverProvider.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -244,6 +245,9 @@
       <workItem from="1645259507640" duration="1218000" />
       <workItem from="1645284232653" duration="27541000" />
       <workItem from="1645348606612" duration="8198000" />
+      <workItem from="1645357028859" duration="1096000" />
+      <workItem from="1645429323462" duration="14000" />
+      <workItem from="1647034289846" duration="5952000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -357,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645352398051</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="rostock-withlogout: back to selenium ver 3.141.59 current config - HAMBURG">
+      <created>1645357200402</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1645357200403</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +399,8 @@
     <MESSAGE value="add-new-crt-channels: v2 multi HAMBURG done" />
     <MESSAGE value="add-new-crt-channels: v2 multi ROSTOCK done" />
     <MESSAGE value="rostock-with-logout: v2 multi ROSTOCK done" />
-    <option name="LAST_COMMIT_MESSAGE" value="rostock-with-logout: v2 multi ROSTOCK done" />
+    <MESSAGE value="rostock-withlogout: back to selenium ver 3.141.59 current config - HAMBURG" />
+    <option name="LAST_COMMIT_MESSAGE" value="rostock-withlogout: back to selenium ver 3.141.59 current config - HAMBURG" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,7 +412,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java</url>
-          <line>61</line>
+          <line>66</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>

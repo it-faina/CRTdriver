@@ -7,6 +7,8 @@ public enum LoginChanel {
 
     HAMBURG("Logged in CRT Hamburg"),
     ROSTOCK("Logged in CRT Rostock"),
+    DREIMASTER("Logged in CRT DreiMaster"),
+    MYMO("Logged in CRT myMo"),
     NO_CHANEL("No chanel was setup to login");
 
     private final String chanelDescription;

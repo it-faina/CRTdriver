@@ -50,6 +50,23 @@ public class Configurator extends ConfigProperties {
         return getProperty("passRostock", "demoPasswordRostock");
     }
 
+    public static String getDreiMasterUser() {
+        return getProperty("userDreiMaster", "demoUserDreiMaster");
+    }
+
+    public static String getDreiMasterPass() {
+        return getProperty("passDreiMaster", "demoPasswordDreiMaster");
+    }
+
+    public static String getmyMoUser() {
+        return getProperty("usermyMo", "demomyMo");
+    }
+
+    public static String getmyMoPass() {
+        return getProperty("passmyMo", "demoPasswordmyMo");
+    }
+
+
     public static boolean getServiceOrderMode() {
         return getProperty("ServiceOrderMode", true);
     }
