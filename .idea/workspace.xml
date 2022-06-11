@@ -9,12 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="rostock-withlogout: DreiMaster service channel implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hamburg-with-logout" />
+        <entry key="$PROJECT_DIR$" value="rostock-with-logout" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -248,7 +248,11 @@
       <workItem from="1647102390760" duration="1313000" />
       <workItem from="1647847341314" duration="833000" />
       <workItem from="1647848428072" duration="16000" />
-      <workItem from="1648658128952" duration="1427000" />
+      <workItem from="1648658128952" duration="2139000" />
+      <workItem from="1652122537513" duration="739000" />
+      <workItem from="1654868824642" duration="1094000" />
+      <workItem from="1654878553240" duration="10412000" />
+      <workItem from="1654975005099" duration="15629000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -376,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647043275021</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="rostock-withlogout: MYMO service channel implemented">
+      <created>1648660431426</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1648660431426</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,20 +420,16 @@
     <MESSAGE value="rostock-with-logout: v2 multi ROSTOCK done" />
     <MESSAGE value="rostock-withlogout: back to selenium ver 3.141.59 current config - HAMBURG" />
     <MESSAGE value="rostock-withlogout: DreiMaster service channel implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="rostock-withlogout: DreiMaster service channel implemented" />
+    <MESSAGE value="rostock-withlogout: MYMO service channel implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="rostock-withlogout: MYMO service channel implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="19" />
+          <line>68</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

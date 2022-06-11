@@ -23,7 +23,7 @@ public class RobotLoop {
     private static final long orderAmount = Configurator.getAmountPickedOrders();
 
     public static void main(String[] args) throws InterruptedException, MyThrowableRepeatOrderException {
-        log.info("----CRT robot started-v2-");
+        log.info("----CRT robot started-v3-");
         LoginChanel currentCRTchannel = NO_CHANEL;
 
         if (Configurator.getLoginServicedChanel().equals("HAMBURG")) {

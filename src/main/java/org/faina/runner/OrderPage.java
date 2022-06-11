@@ -5,12 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.time.Duration;
 import java.util.List;
 
 /**
@@ -51,7 +51,7 @@ public class OrderPage extends LoginPage {
         try {
             log.info("-------------------------");
             WebDriverWait webDriverWait = new WebDriverWait(driver, 6);
-            webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='order-header__order-number']")));
+            webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='channel-order-number']")));
         } catch (TimeoutException e) {
             log.info("No new order to pick up at this time");
             throw new NoMoreOrdersException("no more orders found: ");
@@ -62,21 +62,22 @@ public class OrderPage extends LoginPage {
     public void setupProperShopChanel(ShopChanelTitle titleEnum) throws InterruptedException {
 
         if (!isTheSameNameShopChannel(titleEnum)) {
-            WebElement shopChanelButton = driver.findElement(By.xpath("//button[@class='v-toolbar__side-icon v-btn v-btn--icon theme--dark']"));
+            WebElement shopChanelButton = driver.findElement(By.xpath("//button[contains(@class,'v-app-bar__nav-icon')]"));
             shopChanelButton.click();
             sleepOrderPage(1000);
 
             WebElement switchStorePullDownElement = driver.findElement(By.xpath("//div[text()='Switch store']"));
             sleepOrderPage(1000);
-            WebElement pullDownChecker = switchStorePullDownElement.findElement(By.xpath("./following::div[@class='v-list__group__items']"));
-            String menuOpened = pullDownChecker.getAttribute("style");
 
-            if (menuOpened.equals("display: none;")) {
+            try {
+                WebElement element = driver.findElement(By.xpath("//div[contains(@class,'v-list-group__header__append-icon')]/parent::div[contains(@class,'active')]"));
+            } catch (Exception e) {
                 switchStorePullDownElement.click();
                 sleepOrderPage(1000);
             }
 
-            List<WebElement> shopsToChose = switchStorePullDownElement.findElements(By.xpath("./following::div[@data-test='list-of-store']/child::div[@role='listitem']"));
+
+            List<WebElement> shopsToChose = switchStorePullDownElement.findElements(By.xpath("./following::div[@data-test='list-of-store']/child::a[contains(@class,'v-list-item')]"));
             for (WebElement webElement : shopsToChose) {
                 WebElement shopToBeOperate = webElement.findElement(By.xpath(".//div/div"));
                 String shopPosition = shopToBeOperate.getText();
@@ -105,12 +106,12 @@ public class OrderPage extends LoginPage {
     }
 
     public String getOrderIDtoPicking() throws InterruptedException, MyThrowableRepeatOrderException, NoMoreOrdersException {
-        WebElement orderIDText = driver.findElement(By.xpath("//span[@class='order-header__order-number']"));
+        WebElement orderIDText = driver.findElement(By.xpath("//span[@class='channel-order-number']"));
         String orderedNow = orderIDText.getText().substring(6, 20);
         log.info("Run order: {}", orderedNow);
 
         try {
-            List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='order-line'] "));
+            List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='py-2 px-0 order-line'] "));
             String eanToPick;
 
             for (WebElement element : baseOrderID) {
@@ -118,8 +119,11 @@ public class OrderPage extends LoginPage {
                 eanToPick = ean.getText();
                 log.info("Picked {}", eanToPick);
                 WebElement picked = element.findElement(By.xpath("./descendant::button[contains(@class,'order-line__pick__button')]"));
-                //check if button was marked (has a green color)
-                if (!picked.getAttribute("class").equals("order-line__pick__button v-btn v-btn--active v-btn--flat theme--light")) {
+                String backgroundPickedButton = picked.getCssValue("background-color");
+                String color = Color.fromString(backgroundPickedButton).asHex();
+                log.info("picked button background {}", color);
+                //check if button was marked (has a background green color)
+                if (!color.equals("#43a047")) {
                     picked.click();
                 }
             }
@@ -147,10 +151,10 @@ public class OrderPage extends LoginPage {
     }
 
     public void logoutOrderPage() throws InterruptedException {
-        WebElement shopChanelButton = driver.findElement(By.xpath("//button[@class='v-toolbar__side-icon v-btn v-btn--icon theme--dark']"));
+        WebElement shopChanelButton = driver.findElement(By.xpath("//button[contains(@class,'v-app-bar__nav-icon')]"));
         shopChanelButton.click();
         sleepOrderPage(1000);
-        WebElement logoutButton=driver.findElement(By.xpath("//a/div[text()='Logout']"));
+        WebElement logoutButton = driver.findElement(By.xpath("//div[text()='Logout']"));
         logoutButton.click();
         log.info("Logged out from the shop service");
     }
