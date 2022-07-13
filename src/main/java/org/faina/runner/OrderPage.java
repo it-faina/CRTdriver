@@ -111,7 +111,7 @@ public class OrderPage extends LoginPage {
         log.info("Run order: {}", orderedNow);
 
         try {
-            List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='py-2 px-0 order-line'] "));
+            List<WebElement> baseOrderID = driver.findElements(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::section[@class='py-2 px-0 flex-column order-line'] "));
             String eanToPick;
 
             for (WebElement element : baseOrderID) {
