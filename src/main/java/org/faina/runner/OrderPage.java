@@ -30,7 +30,7 @@ public class OrderPage extends LoginPage {
     }
 
     void clickOkCookies() throws InterruptedException {
-        sleepOrderPage(4000);
+        sleepOrderPage(2000);
         WebElement cookies = driver.findElement(By.xpath("//*[@id='uc-btn-accept-banner']"));
         cookies.click();
     }
@@ -50,7 +50,7 @@ public class OrderPage extends LoginPage {
     boolean isNextOrderToPick() throws NoMoreOrdersException {
         try {
             log.info("-------------------------");
-            WebDriverWait webDriverWait = new WebDriverWait(driver, 6);
+            WebDriverWait webDriverWait = new WebDriverWait(driver, 4);
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='channel-order-number']")));
         } catch (TimeoutException e) {
             log.info("No new order to pick up at this time");
@@ -123,7 +123,7 @@ public class OrderPage extends LoginPage {
                 String color = Color.fromString(backgroundPickedButton).asHex();
                 log.info("picked button background {}", color);
                 //check if button was marked (has a background green color)
-                if (!color.equals("#43a047")) {
+                if (!color.equals("#1f8669")) {
                     picked.click();
                 }
             }
