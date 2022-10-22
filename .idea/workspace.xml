@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="after-MYMO-refactoring: after change class name in DOM 20220713">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/webdriver/WebDriverProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +251,18 @@
       <workItem from="1652122537513" duration="739000" />
       <workItem from="1654868824642" duration="1094000" />
       <workItem from="1654878553240" duration="10412000" />
-      <workItem from="1654975005099" duration="15629000" />
+      <workItem from="1654975005099" duration="16086000" />
+      <workItem from="1655069893332" duration="2084000" />
+      <workItem from="1655810642067" duration="1213000" />
+      <workItem from="1656062963708" duration="1133000" />
+      <workItem from="1656064943884" duration="3222000" />
+      <workItem from="1656354327343" duration="12000" />
+      <workItem from="1657694540349" duration="3158000" />
+      <workItem from="1657894087524" duration="3045000" />
+      <workItem from="1663357835768" duration="1556000" />
+      <workItem from="1666185552960" duration="27000" />
+      <workItem from="1666185610879" duration="74000" />
+      <workItem from="1666420924420" duration="5994000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -387,7 +397,28 @@
       <option name="project" value="LOCAL" />
       <updated>1648660431426</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="after-MYMO-refactoring: upgrade for new CRT version - improved chosing channels">
+      <created>1654991027399</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654991027399</updated>
+    </task>
+    <task id="LOCAL-00021" summary="after-MYMO-refactoring: after change class name in DOM 20220713">
+      <created>1657697694619</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1657697694619</updated>
+    </task>
+    <task id="LOCAL-00022" summary="after-MYMO-refactoring: new collor #1f8669 implemented in picked button">
+      <created>1657896203431</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1657896203431</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,15 +452,18 @@
     <MESSAGE value="rostock-withlogout: back to selenium ver 3.141.59 current config - HAMBURG" />
     <MESSAGE value="rostock-withlogout: DreiMaster service channel implemented" />
     <MESSAGE value="rostock-withlogout: MYMO service channel implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="rostock-withlogout: MYMO service channel implemented" />
+    <MESSAGE value="after-MYMO-refactoring: upgrade for new CRT version - improved chosing channels" />
+    <MESSAGE value="after-MYMO-refactoring: after change class name in DOM 20220713" />
+    <MESSAGE value="after-MYMO-refactoring: new collor #1f8669 implemented in picked button" />
+    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: new collor #1f8669 implemented in picked button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="36" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

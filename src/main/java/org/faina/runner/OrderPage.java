@@ -30,7 +30,8 @@ public class OrderPage extends LoginPage {
     }
 
     void clickOkCookies() throws InterruptedException {
-        sleepOrderPage(2000);
+        sleepOrderPage(3000);
+//        Thread.sleep(2000);
         WebElement cookies = driver.findElement(By.xpath("//*[@id='uc-btn-accept-banner']"));
         cookies.click();
     }
@@ -50,7 +51,7 @@ public class OrderPage extends LoginPage {
     boolean isNextOrderToPick() throws NoMoreOrdersException {
         try {
             log.info("-------------------------");
-            WebDriverWait webDriverWait = new WebDriverWait(driver, 4);
+            WebDriverWait webDriverWait = new WebDriverWait(driver, 2);
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='channel-order-number']")));
         } catch (TimeoutException e) {
             log.info("No new order to pick up at this time");
@@ -153,7 +154,7 @@ public class OrderPage extends LoginPage {
     public void logoutOrderPage() throws InterruptedException {
         WebElement shopChanelButton = driver.findElement(By.xpath("//button[contains(@class,'v-app-bar__nav-icon')]"));
         shopChanelButton.click();
-        sleepOrderPage(1000);
+        sleepOrderPage(2000);
         WebElement logoutButton = driver.findElement(By.xpath("//div[text()='Logout']"));
         logoutButton.click();
         log.info("Logged out from the shop service");

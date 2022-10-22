@@ -16,23 +16,27 @@ import org.slf4j.LoggerFactory;
 public class LoginPage {
     final static Logger log = LoggerFactory.getLogger(LoginPage.class);
 
-    public OrderPage loginAsUser(StoreUser loggedCRTStoreUser) {
+    public OrderPage loginAsUser(StoreUser loggedCRTStoreUser) throws InterruptedException {
         WebDriverProvider.start();
         WebDriver driver = WebDriverProvider.getDriver();
         WebDriver.Timeouts timeouts = WebDriverProvider.getTimeouts();
         driver.navigate().to(Configurator.getLandingPage());
-        WebElement userName = driver.findElement(By.xpath("//input[@id='1-email']"));
+        WebElement userName = driver.findElement(By.xpath("//input[@id='input27']"));
         userName.sendKeys(loggedCRTStoreUser.getLogin());
-        WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
-        password.sendKeys(loggedCRTStoreUser.getPassword());
-        WebElement button = driver.findElement(By.xpath("//*[@id='auth0-lock-container-1']/div/div[2]/form/div/div/div/button"));
+        WebElement button = driver.findElement(By.xpath("//*[@id=\"form19\"]/div[2]/input"));
         button.click();
+        Thread.sleep(3000);
+
+        WebElement password = driver.findElement(By.xpath("//input[@id='input59']"));
+        password.sendKeys(loggedCRTStoreUser.getPassword());
+        WebElement button_weryfikuj = driver.findElement(By.xpath("//*[@id=\"form51\"]/div[2]/input"));
+        button_weryfikuj.click();
         log.info("{} channel.", loggedCRTStoreUser.getConnectedRetailInfo());
         return new OrderPage(driver, timeouts);
     }
 
     void quitLoginPage() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         WebDriverProvider.quit();
     }
 }

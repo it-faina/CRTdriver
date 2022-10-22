@@ -16,6 +16,7 @@ import static org.faina.configuration.robotenums.ShopChanelTitle.*;
  * Class Robot Loop
  * execute picking orders from CRT Store ordering interface chanel
  * (c) Marek Wozniak 2022.02
+ * Last update - 'New partner login service'  at 2022.10.22
  */
 public class RobotLoop {
     final static Logger log = LoggerFactory.getLogger(RobotLoop.class);
