@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="after-MYMO-refactoring: after change class name in DOM 20220713">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="after-MYMO-refactoring: New Partner Login service feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/StoreUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/StoreUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/LoginChanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/LoginChanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +266,12 @@
       <workItem from="1663357835768" duration="1556000" />
       <workItem from="1666185552960" duration="27000" />
       <workItem from="1666185610879" duration="74000" />
-      <workItem from="1666420924420" duration="5994000" />
+      <workItem from="1666420924420" duration="7796000" />
+      <workItem from="1666547451119" duration="3933000" />
+      <workItem from="1667948129784" duration="3564000" />
+      <workItem from="1670405801838" duration="1048000" />
+      <workItem from="1670797531854" duration="2884000" />
+      <workItem from="1670800436897" duration="632000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -418,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657896203431</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="after-MYMO-refactoring: New Partner Login service feature">
+      <created>1666427751683</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1666427751683</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +471,8 @@
     <MESSAGE value="after-MYMO-refactoring: upgrade for new CRT version - improved chosing channels" />
     <MESSAGE value="after-MYMO-refactoring: after change class name in DOM 20220713" />
     <MESSAGE value="after-MYMO-refactoring: new collor #1f8669 implemented in picked button" />
-    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: new collor #1f8669 implemented in picked button" />
+    <MESSAGE value="after-MYMO-refactoring: New Partner Login service feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: New Partner Login service feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -464,6 +481,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
           <line>53</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

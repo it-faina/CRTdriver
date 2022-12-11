@@ -36,6 +36,36 @@ public class StoreUser {
                 this.connectedRetailInfo = MYMO.getChanelDescription();
                 break;
 
+            case KLIPPHAUSEN:
+                login = Configurator.getKlipphausenUser();
+                password = Configurator.getKlipphausenPass();
+                this.connectedRetailInfo = KLIPPHAUSEN.getChanelDescription();
+                break;
+
+            case PLPTAKOUTLET:
+                login = Configurator.getPLPtakOutletUser();
+                password = Configurator.getPLPtakOutletPass();
+                this.connectedRetailInfo = PLPTAKOUTLET.getChanelDescription();
+                break;
+
+            case PLSCHMUDDELWEDDA:
+                login = Configurator.getPLSchmuddelweddaUser();
+                password = Configurator.getPLSchmuddelweddaPass();
+                this.connectedRetailInfo = PLSCHMUDDELWEDDA.getChanelDescription();
+                break;
+
+            case PLMYMO:
+                login = Configurator.getPLMyMoUser();
+                password = Configurator.getPLMyMoPass();
+                this.connectedRetailInfo = PLMYMO.getChanelDescription();
+                break;
+
+            case PLDREIMASTER:
+                login = Configurator.getPLDreiMasterUser();
+                password = Configurator.getPLDreiMasterPass();
+                this.connectedRetailInfo = PLDREIMASTER.getChanelDescription();
+                break;
+
             default:
         }
     }

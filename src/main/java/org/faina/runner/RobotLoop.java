@@ -15,8 +15,8 @@ import static org.faina.configuration.robotenums.ShopChanelTitle.*;
 /**
  * Class Robot Loop
  * execute picking orders from CRT Store ordering interface chanel
- * (c) Marek Wozniak 2022.02
- * Last update - 'New partner login service'  at 2022.10.22
+ * (c) Marek Wozniak 2022.12
+ * Last update - 'PL CRT partners login'  at 2022.12.12
  */
 public class RobotLoop {
     final static Logger log = LoggerFactory.getLogger(RobotLoop.class);
@@ -24,7 +24,7 @@ public class RobotLoop {
     private static final long orderAmount = Configurator.getAmountPickedOrders();
 
     public static void main(String[] args) throws InterruptedException, MyThrowableRepeatOrderException {
-        log.info("----CRT robot started-v3-");
+        log.info("----CRT robot started-v6-");
         LoginChanel currentCRTchannel = NO_CHANEL;
 
         if (Configurator.getLoginServicedChanel().equals("HAMBURG")) {
@@ -39,7 +39,21 @@ public class RobotLoop {
         if (Configurator.getLoginServicedChanel().equals("MYMO")) {
             currentCRTchannel = MYMO;
         }
-
+        if (Configurator.getLoginServicedChanel().equals("KLIPPHAUSEN")) {
+            currentCRTchannel = KLIPPHAUSEN;
+        }
+        if (Configurator.getLoginServicedChanel().equals("PLPTAKOUTLET")) {
+            currentCRTchannel = PLPTAKOUTLET;
+        }
+        if (Configurator.getLoginServicedChanel().equals("PLSCHMUDDELWEDDA")) {
+            currentCRTchannel = PLSCHMUDDELWEDDA;
+        }
+        if (Configurator.getLoginServicedChanel().equals("PLMYMO")) {
+            currentCRTchannel = PLMYMO;
+        }
+        if (Configurator.getLoginServicedChanel().equals("PLDREIMASTER")) {
+            currentCRTchannel = PLDREIMASTER;
+        }
         if (currentCRTchannel != NO_CHANEL) {
             serviceShopChanel(currentCRTchannel);  //entry to the service
         }
