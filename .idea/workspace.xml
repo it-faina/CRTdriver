@@ -11,9 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +264,8 @@
       <workItem from="1667948129784" duration="3564000" />
       <workItem from="1670405801838" duration="1048000" />
       <workItem from="1670797531854" duration="2884000" />
-      <workItem from="1670800436897" duration="2674000" />
+      <workItem from="1670800436897" duration="3260000" />
+      <workItem from="1673338982471" duration="1707000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -444,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670801196922</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="after-MYMO-refactoring: PL CRT business mode: PLDREIMASTER 5.15  run oll orders">
+      <created>1670807867545</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670807867545</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +488,8 @@
     <MESSAGE value="after-MYMO-refactoring: new collor #1f8669 implemented in picked button" />
     <MESSAGE value="after-MYMO-refactoring: New Partner Login service feature" />
     <MESSAGE value="after-MYMO-refactoring: PL CRT test mode: PLPTAKOUTLET PLSCHMUDDELWEDDA PLMYMO PLDREIMASTER" />
-    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: PL CRT test mode: PLPTAKOUTLET PLSCHMUDDELWEDDA PLMYMO PLDREIMASTER" />
+    <MESSAGE value="after-MYMO-refactoring: PL CRT business mode: PLDREIMASTER 5.15  run oll orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: PL CRT business mode: PLDREIMASTER 5.15  run oll orders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
