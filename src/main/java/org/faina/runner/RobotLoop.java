@@ -77,6 +77,9 @@ public class RobotLoop {
         if (!SHOP_CHANEL3.getShopChanelTitle().equals(SKIP_CHANEL.getShopChanelTitle())) {
             shopingSequence.add(SHOP_CHANEL3);
         }
+        if (!SHOP_CHANEL4.getShopChanelTitle().equals(SKIP_CHANEL.getShopChanelTitle())) {
+            shopingSequence.add(SHOP_CHANEL4);
+        }
 
 
         for (ShopChanelTitle title : shopingSequence) {

@@ -13,7 +13,6 @@ public class Configurator extends ConfigProperties {
         return getProperty("implicityWaitTime", 0);
     }
 
-
     public static String getLandingPage() {
         return getProperty("landingPage", "http://www.faina-lifestyle.pl/");
     }
@@ -34,7 +33,13 @@ public class Configurator extends ConfigProperties {
         return getProperty("shopChanel3Title", "EMPTY");
     }
 
-    public static String getHamburgUser() { return getProperty("userHamburg", "demoUserHamburg"); }
+    public static String getShopChanel4Title() {
+        return getProperty("shopChanel4Title", "EMPTY");
+    }
+
+    public static String getHamburgUser() {
+        return getProperty("userHamburg", "demoUserHamburg");
+    }
 
     public static String getHamburgPass() {
         return getProperty("passHamburg", "demoPasswordHamburg");
@@ -56,34 +61,53 @@ public class Configurator extends ConfigProperties {
         return getProperty("passDreiMaster", "demoPasswordDreiMaster");
     }
 
-    public static String getmyMoUser() { return getProperty("usermyMo", "demomyMo"); }
+    public static String getmyMoUser() {
+        return getProperty("usermyMo", "demomyMo");
+    }
 
     public static String getmyMoPass() {
         return getProperty("passmyMo", "demoPasswordmyMo");
     }
 
-    public static String getKlipphausenUser() { return getProperty("userKlipphausen", "demoKlipphausen"); }
+    public static String getKlipphausenUser() {
+        return getProperty("userKlipphausen", "demoKlipphausen");
+    }
 
     public static String getKlipphausenPass() {
         return getProperty("passKlipphausen", "demoKlipphausen");
     }
 
-    public static String getPLPtakOutletUser() { return getProperty("userPLPtakOutlet", "demoPLPtakOutlet"); }
+    public static String getPLPtakOutletUser() {
+        return getProperty("userPLPtakOutlet", "demoPLPtakOutlet");
+    }
 
-    public static String getPLPtakOutletPass() { return getProperty("passPLPtakOutlet", "demoPasswordPLPtakOutlet");}
+    public static String getPLPtakOutletPass() {
+        return getProperty("passPLPtakOutlet", "demoPasswordPLPtakOutlet");
+    }
 
-    public static String getPLSchmuddelweddaUser() { return getProperty("userPLSchmuddelwedda", "demoPLSchmuddelwedda"); }
+    public static String getPLSchmuddelweddaUser() {
+        return getProperty("userPLSchmuddelwedda", "demoPLSchmuddelwedda");
+    }
 
-    public static String getPLSchmuddelweddaPass() { return getProperty("passPLSchmuddelwedda", "demoPasswordPLSchmuddelwedda");}
+    public static String getPLSchmuddelweddaPass() {
+        return getProperty("passPLSchmuddelwedda", "demoPasswordPLSchmuddelwedda");
+    }
 
-    public static String getPLMyMoUser() { return getProperty("userPLMyMo", "demoPLMyMo"); }
+    public static String getPLMyMoUser() {
+        return getProperty("userPLMyMo", "demoPLMyMo");
+    }
 
-    public static String getPLMyMoPass() { return getProperty("passPLMyMo", "demoPasswordPLMyMo");}
+    public static String getPLMyMoPass() {
+        return getProperty("passPLMyMo", "demoPasswordPLMyMo");
+    }
 
-    public static String getPLDreiMasterUser() { return getProperty("userPLDreiMaster", "demoPLDreiMaster"); }
+    public static String getPLDreiMasterUser() {
+        return getProperty("userPLDreiMaster", "demoPLDreiMaster");
+    }
 
-    public static String getPLDreiMasterPass() { return getProperty("passPLDreiMaster", "demoPasswordPLDreiMaster");}
-
+    public static String getPLDreiMasterPass() {
+        return getProperty("passPLDreiMaster", "demoPasswordPLDreiMaster");
+    }
 
     public static boolean getServiceOrderMode() {
         return getProperty("ServiceOrderMode", true);

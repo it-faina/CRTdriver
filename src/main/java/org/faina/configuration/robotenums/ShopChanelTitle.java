@@ -10,6 +10,7 @@ public enum ShopChanelTitle {
     SHOP_CHANEL1(Configurator.getShopChanel1Title()),
     SHOP_CHANEL2(Configurator.getShopChanel2Title()),
     SHOP_CHANEL3(Configurator.getShopChanel3Title()),
+    SHOP_CHANEL4(Configurator.getShopChanel4Title()),
     SKIP_CHANEL("EMPTY");
 
     private final String title;

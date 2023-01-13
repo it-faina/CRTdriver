@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 /**
@@ -131,6 +133,25 @@ public class OrderPage extends LoginPage {
 
             WebElement printButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'documents-printing__button-print')]"));
             printButton.click();
+            sleepOrderPage(2000);
+
+            Robot a = new Robot();
+            int keyCode = KeyEvent.VK_ESCAPE;
+            a.keyPress(keyCode);
+            a.keyRelease(keyCode);
+
+            sleepOrderPage(2000);
+            WebElement shippingButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'print-shipping-labels')]"));
+            shippingButton.click();
+
+            sleepOrderPage(2000);
+
+            Robot b = new Robot();
+            int keyCodeB = KeyEvent.VK_ESCAPE;
+            b.keyPress(keyCodeB);
+            b.keyRelease(keyCodeB);
+
+            sleepOrderPage(2000);
 
             WebElement completeButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'order_fulfillment-button_complete')]"));
             completeButton.click();
