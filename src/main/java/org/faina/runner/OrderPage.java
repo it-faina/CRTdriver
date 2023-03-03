@@ -124,37 +124,42 @@ public class OrderPage extends LoginPage {
                 WebElement picked = element.findElement(By.xpath("./descendant::button[contains(@class,'order-line__pick__button')]"));
                 String backgroundPickedButton = picked.getCssValue("background-color");
                 String color = Color.fromString(backgroundPickedButton).asHex();
-                log.info("picked button background {}", color);
+                log.info("picked button BACKGROUND {}", color);
                 //check if button was marked (has a background green color)
                 if (!color.equals("#1f8669")) {
                     picked.click();
                 }
             }
-
+            log.info("turn 1 -wait for pup up window");
+            sleepOrderPage(4000);
             WebElement printButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'documents-printing__button-print')]"));
             printButton.click();
-            sleepOrderPage(2000);
+            log.info("turn 2 -print clicked, wait for esc be clicked");
 
+            sleepOrderPage(4000);
             Robot a = new Robot();
             int keyCode = KeyEvent.VK_ESCAPE;
             a.keyPress(keyCode);
             a.keyRelease(keyCode);
+            log.info("turn 3 -ESC clicked, wait Shipping button");
 
-            sleepOrderPage(2000);
-            WebElement shippingButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'print-shipping-labels')]"));
-            shippingButton.click();
-
-            sleepOrderPage(2000);
-
-            Robot b = new Robot();
-            int keyCodeB = KeyEvent.VK_ESCAPE;
-            b.keyPress(keyCodeB);
-            b.keyRelease(keyCodeB);
-
-            sleepOrderPage(2000);
-
+            sleepOrderPage(4000);
+//            WebElement shippingButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'print-shipping-labels')]"));
+//            shippingButton.click();
+//            log.info("turn 4 -Shipping clicked, wait for ESC after Shipping");
+//
+//            sleepOrderPage(4000);
+//            Robot b = new Robot();
+//            int keyCodeB = KeyEvent.VK_ESCAPE;
+//            b.keyPress(keyCodeB);
+//            b.keyRelease(keyCodeB);
+//            log.info("turn 5 -ESC clicked, before wait");
+//            sleepOrderPage(4000);
+//            log.info("turn 5a -ESC clicked, after wait for Complete button");
             WebElement completeButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'order_fulfillment-button_complete')]"));
+            sleepOrderPage(4000);
             completeButton.click();
+            log.info("turn 6 -Complete button clicked");
 
         } catch (Exception exception) {
             log.error("error in complete after printing ", exception);

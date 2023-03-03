@@ -9,18 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="">
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="after-MYMO-refactoring: service 4 ptakoutlet channels done">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CRTdriver_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CRTdriver_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/backingpack/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/backingpack/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/Configurator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/ShopChanelTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/configuration/robotenums/ShopChanelTitle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/RobotLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/faina/backingpack/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/faina/backingpack/Order.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,18 +57,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.38045976" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.deploy.options",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Faina04\IdeaProj_Ultimate\CRT\src\main\resources" />
@@ -87,7 +84,7 @@
   <component name="RunManager" selected="Application.RobotLoop">
     <configuration name="RobotLoop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.faina.runner.RobotLoop" />
-      <module name="CRTdriver" />
+      <module name="CRT" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.faina.runner.*" />
@@ -277,7 +274,12 @@
       <workItem from="1670800436897" duration="3260000" />
       <workItem from="1673338982471" duration="10791000" />
       <workItem from="1673451889582" duration="1357000" />
-      <workItem from="1673568281019" duration="2124000" />
+      <workItem from="1673568281019" duration="2779000" />
+      <workItem from="1673854418586" duration="1165000" />
+      <workItem from="1673858435551" duration="3735000" />
+      <workItem from="1677766584071" duration="264000" />
+      <workItem from="1677766931904" duration="4256000" />
+      <workItem from="1677771215959" duration="4757000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -468,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673341516249</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="after-MYMO-refactoring: service 4 ptakoutlet channels done">
+      <created>1673570469311</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673570469311</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,6 +518,7 @@
     <MESSAGE value="after-MYMO-refactoring: PL CRT test mode: PLPTAKOUTLET PLSCHMUDDELWEDDA PLMYMO PLDREIMASTER" />
     <MESSAGE value="after-MYMO-refactoring: PL CRT business mode: PLDREIMASTER 5.15  run oll orders" />
     <MESSAGE value="after-MYMO-refactoring: CANCEL button press in print procedure before changes (working version)" />
-    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: CANCEL button press in print procedure before changes (working version)" />
+    <MESSAGE value="after-MYMO-refactoring: service 4 ptakoutlet channels done" />
+    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: service 4 ptakoutlet channels done" />
   </component>
 </project>
