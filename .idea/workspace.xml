@@ -9,13 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="after-MYMO-refactoring: service 4 ptakoutlet channels done">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CRTdriver_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CRTdriver_jar.xml" afterDir="false" />
+    <list default="true" id="5c2f5a89-75e9-419a-add1-7522b09973a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/faina/runner/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,20 +53,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.deploy.options",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.deploy.options&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Faina04\IdeaProj_Ultimate\CRT\src\main\resources" />
@@ -280,6 +277,8 @@
       <workItem from="1677766584071" duration="264000" />
       <workItem from="1677766931904" duration="4256000" />
       <workItem from="1677771215959" duration="4757000" />
+      <workItem from="1677834557662" duration="1098000" />
+      <workItem from="1677841690402" duration="386000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit - on advanced version">
       <created>1643661522876</created>
@@ -477,11 +476,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673570469311</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="after-MYMO-refactoring: back to Hamburg shop service channel 1 done">
+      <created>1677834741192</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1677834741192</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -519,6 +528,7 @@
     <MESSAGE value="after-MYMO-refactoring: PL CRT business mode: PLDREIMASTER 5.15  run oll orders" />
     <MESSAGE value="after-MYMO-refactoring: CANCEL button press in print procedure before changes (working version)" />
     <MESSAGE value="after-MYMO-refactoring: service 4 ptakoutlet channels done" />
-    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: service 4 ptakoutlet channels done" />
+    <MESSAGE value="after-MYMO-refactoring: back to Hamburg shop service channel 1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="after-MYMO-refactoring: back to Hamburg shop service channel 1 done" />
   </component>
 </project>

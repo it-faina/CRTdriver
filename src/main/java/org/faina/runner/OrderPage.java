@@ -131,19 +131,19 @@ public class OrderPage extends LoginPage {
                 }
             }
             log.info("turn 1 -wait for pup up window");
-            sleepOrderPage(4000);
+            sleepOrderPage(1000);
             WebElement printButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'documents-printing__button-print')]"));
             printButton.click();
             log.info("turn 2 -print clicked, wait for esc be clicked");
 
-            sleepOrderPage(4000);
+            sleepOrderPage(1000);
             Robot a = new Robot();
             int keyCode = KeyEvent.VK_ESCAPE;
             a.keyPress(keyCode);
             a.keyRelease(keyCode);
             log.info("turn 3 -ESC clicked, wait Shipping button");
 
-            sleepOrderPage(4000);
+            sleepOrderPage(1000);
 //            WebElement shippingButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'print-shipping-labels')]"));
 //            shippingButton.click();
 //            log.info("turn 4 -Shipping clicked, wait for ESC after Shipping");
@@ -157,7 +157,7 @@ public class OrderPage extends LoginPage {
 //            sleepOrderPage(4000);
 //            log.info("turn 5a -ESC clicked, after wait for Complete button");
             WebElement completeButton = driver.findElement(By.xpath("//span[text()='" + orderedNow + "']/ancestor::div[contains(@class,'v-card v-sheet theme--light')]/descendant::button[contains(@class,'order_fulfillment-button_complete')]"));
-            sleepOrderPage(4000);
+            sleepOrderPage(1000);
             completeButton.click();
             log.info("turn 6 -Complete button clicked");
 
@@ -168,7 +168,7 @@ public class OrderPage extends LoginPage {
         } finally {
             sleepOrderPage(1000);
             driver.navigate().refresh();
-            sleepOrderPage(3000);
+            sleepOrderPage(2000);
         }
         return orderedNow;
     }
